@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Светолюкс × SVL</title>
+<title>Светолюкс × SVL — для MEGA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
@@ -151,6 +151,7 @@ body.lt .glow{opacity:0}
 .imgs3{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:100%}
 .imgs3 .rimg:first-child{grid-row:span 2}
 .list{list-style:none;margin-top:44px}
+.split .lead+.list{margin-top:36px}
 .list li{display:grid;grid-template-columns:52px 1fr;padding:20px 0;border-top:1px solid var(--line);font-size:22px;font-weight:300;line-height:1.45}
 .list li span{font-size:14px;color:var(--mut);letter-spacing:.1em;padding-top:6px}
 .list li b{font-weight:500}
@@ -233,7 +234,7 @@ body.lt .glow{opacity:0}
 .proj .main{position:relative;overflow:hidden;height:100%}
 .proj .main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s var(--e),transform 8s linear;transform:scale(1.08)}
 .proj .main img.cur{opacity:1;transform:scale(1)}
-.proj .info{padding:150px 110px 140px 80px;display:flex;flex-direction:column}
+.proj .info{padding:150px 110px 140px 80px;display:flex;flex-direction:column;min-width:0}
 .proj .idx{font-size:15px;letter-spacing:.2em;color:var(--mut)}
 .proj h2{font-size:92px;font-weight:400;letter-spacing:-.035em;line-height:1;margin:40px 0 14px}
 .proj .city{font-family:var(--serif);font-style:italic;font-size:38px;color:var(--accent)}
@@ -241,7 +242,7 @@ body.lt .glow{opacity:0}
 .proj .tag{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
 .proj .tag span{font-size:14px;letter-spacing:.1em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--line);border-radius:40px;color:var(--mut)}
 .thumbs{margin-top:auto;display:flex;gap:12px;pointer-events:auto}
-.thumbs button{all:unset;cursor:pointer;width:118px;height:84px;overflow:hidden;opacity:.4;transition:opacity .4s;position:relative}
+.thumbs button{all:unset;cursor:pointer;width:84px;height:60px;overflow:hidden;opacity:.4;transition:opacity .4s;position:relative}
 .thumbs button::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--accent);transition:width .4s}
 .thumbs button.a{opacity:1}.thumbs button.a::after{width:100%}
 .thumbs img{width:100%;height:100%;object-fit:cover}
@@ -381,6 +382,121 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .contacts img{height:30px;width:auto;margin-bottom:28px}
 .contacts p{font-size:22px;line-height:1.75;font-weight:300;color:rgba(242,237,228,.82)}
 
+/* ================= MEGA edition ================= */
+.src{position:absolute;left:140px;right:140px;bottom:84px;font-size:14px;letter-spacing:.04em;color:var(--mut);opacity:.75}
+
+/* mall cross-section */
+.mall{position:absolute;left:90px;top:300px;width:1120px;height:700px}
+.mall svg{width:100%;height:100%;overflow:visible}
+.mall .ms{fill:none;stroke:rgba(242,237,228,.26);stroke-width:1.4}
+.mall .ms2{fill:none;stroke:rgba(242,237,228,.12);stroke-width:1}
+.mall .z{opacity:.16;transition:opacity .8s var(--e)}
+.mall .z.a{opacity:1}
+.mall .hs{cursor:pointer;pointer-events:auto}
+.mall .hs .b{fill:var(--ink);stroke:rgba(242,237,228,.45);stroke-width:1.2;transition:all .4s}
+.mall .hs text{fill:var(--tx);font:500 12px var(--sans);letter-spacing:.06em;text-anchor:middle;dominant-baseline:central}
+.mall .hs .rg{fill:none;stroke:var(--accent);stroke-width:1.5;opacity:0}
+.mall .hs.a .b{fill:var(--accent);stroke:var(--accent)}
+.mall .hs.a text{fill:#14120f}
+.mall .hs.a .rg{animation:ring 1.8s ease-out infinite}
+@keyframes ring{0%{r:15;opacity:.9}100%{r:34;opacity:0}}
+.zinfo{position:absolute;right:140px;top:300px;width:540px}
+.zinfo .zn{font-size:15px;letter-spacing:.2em;color:var(--mut)}
+.zinfo h3{font-size:58px;font-weight:400;letter-spacing:-.025em;margin:22px 0 10px;line-height:1.02}
+.zinfo .zt{font-family:var(--serif);font-style:italic;font-size:32px;color:var(--accent);line-height:1.15}
+.zinfo .zs{font-size:21px;line-height:1.55;color:var(--mut);font-weight:300;margin-top:26px;min-height:132px}
+.zinfo .chips{display:grid;grid-template-columns:repeat(3,1fr);margin-top:30px;border-top:1px solid var(--line)}
+.zinfo .chips div{padding:18px 14px 0 0}
+.zinfo .chips b{display:block;font-size:30px;font-weight:300;letter-spacing:-.02em}
+.zinfo .chips span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.zfade{transition:opacity .35s,transform .5s var(--e)}
+.zfade.out{opacity:0;transform:translateY(10px)}
+.zlist{display:flex;gap:8px;margin-top:40px;pointer-events:auto}
+.zlist button{all:unset;cursor:pointer;flex:1;height:3px;background:var(--line);position:relative;overflow:hidden}
+.zlist button i{position:absolute;inset:0;background:var(--accent);transform:scaleX(0);transform-origin:left}
+.zlist button.a i{transform:scaleX(1);transition:transform 4.4s linear}
+.zlist button.done i{transform:scaleX(1)}
+.zlist.man button.a i{transition:none}
+
+/* light layers */
+.lay{position:relative;height:100%;overflow:hidden;border-radius:2px}
+.lay img{width:100%;height:100%;object-fit:cover;transition:filter 1.2s var(--e)}
+.lay[data-s="0"] img{filter:brightness(.78) saturate(.55) contrast(.8)}
+.lay[data-s="1"] img{filter:brightness(.62) saturate(.85) contrast(1.05)}
+.lay[data-s="2"] img{filter:brightness(.66) saturate(1) contrast(1.08)}
+.lay .flat{position:absolute;inset:0;background:rgba(220,225,235,.16);mix-blend-mode:screen;transition:opacity 1.2s}
+.lay .ac{position:absolute;inset:0;mix-blend-mode:overlay;opacity:0;transition:opacity 1.2s var(--e);
+  background:radial-gradient(circle at 63% 21%,rgba(255,236,200,.95),transparent 11%),radial-gradient(circle at 80% 19%,rgba(255,236,200,.9),transparent 10%),radial-gradient(circle at 66% 38%,rgba(255,236,200,.9),transparent 11%),radial-gradient(circle at 84% 37%,rgba(255,236,200,.85),transparent 10%),radial-gradient(circle at 74% 54%,rgba(255,236,200,.85),transparent 12%),radial-gradient(ellipse at 38% 74%,rgba(255,226,180,.8),transparent 22%)}
+.lay .dc{position:absolute;inset:0;mix-blend-mode:screen;opacity:0;transition:opacity 1.4s var(--e);
+  background:linear-gradient(180deg,rgba(255,170,80,.32),transparent 16%),radial-gradient(ellipse at 50% 100%,rgba(255,150,60,.28),transparent 45%),radial-gradient(circle at 22% 30%,rgba(255,190,110,.35),transparent 14%)}
+.lay[data-s="0"] .flat{opacity:1}.lay[data-s="1"] .flat,.lay[data-s="2"] .flat{opacity:0}
+.lay[data-s="1"] .ac,.lay[data-s="2"] .ac{opacity:1}
+.lay[data-s="2"] .dc{opacity:1}
+.lay .tagl{position:absolute;left:28px;bottom:24px;font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:#fff;text-shadow:0 1px 16px rgba(0,0,0,.6)}
+.lbtn{display:flex;flex-direction:column;margin-top:44px;border-top:1px solid var(--line);pointer-events:auto}
+.lbtn button{all:unset;cursor:pointer;display:grid;grid-template-columns:52px 1fr 120px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);opacity:.4;transition:opacity .5s}
+.lbtn button.a{opacity:1}
+.lbtn button .k{font-size:14px;letter-spacing:.14em;color:var(--accent)}
+.lbtn button b{display:block;font-size:28px;font-weight:400;letter-spacing:-.01em}
+.lbtn button small{display:block;font-size:18px;color:var(--mut);font-weight:300;margin-top:6px}
+.lbtn button .bar2{height:4px;background:var(--line);position:relative;border-radius:2px;overflow:hidden}
+.lbtn button .bar2 i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:2px;width:var(--w)}
+
+/* CCT ranges */
+.cctc{margin-top:36px;position:relative}
+.cctc .axis{display:grid;grid-template-columns:420px 1fr 160px;align-items:center;margin-bottom:18px}
+.cctc .scale{height:10px;border-radius:5px;background:linear-gradient(90deg,#ffa95c,#ffbf80 14%,#ffd6a8 43%,#ffe6cf 71%,#f2f4ff)}
+.cctc .tks{display:flex;justify-content:space-between;font-size:14px;color:var(--mut);letter-spacing:.08em;margin-top:10px}
+.crow{display:grid;grid-template-columns:420px 1fr 160px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.crow b{font-size:23px;font-weight:400}
+.crow small{display:block;font-size:16px;color:var(--mut);font-weight:300;margin-top:3px}
+.crow .trk{position:relative;height:26px}
+.crow .trk::before{content:"";position:absolute;left:0;right:0;top:12px;height:1px;background:var(--line)}
+.crow .rng{position:absolute;top:5px;height:16px;border-radius:8px;transform:scaleX(0);transform-origin:left;transition:transform 1.3s var(--e);box-shadow:0 0 18px rgba(255,190,120,.25)}
+.on .crow .rng{transform:scaleX(1)}
+.crow .cri2{text-align:right;font-size:22px;font-weight:300}
+.crow .cri2 span{font-size:13px;letter-spacing:.14em;color:var(--mut);margin-right:8px}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:640px 1fr;gap:120px;margin-top:64px}
+.inp{padding:22px 0 26px;border-top:1px solid var(--line)}
+.inp .row1{display:flex;justify-content:space-between;align-items:baseline}
+.inp label{font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.inp output{font-size:34px;font-weight:300;letter-spacing:-.02em}
+.inp output small{font-size:16px;color:var(--mut);margin-left:6px;letter-spacing:0}
+.calc input[type=range]{margin-top:18px;background:rgba(242,237,228,.18)}
+.calc input[type=range]::-webkit-slider-thumb{background:var(--accent);border:5px solid var(--ink);box-shadow:0 0 0 1px var(--accent),0 0 18px color-mix(in srgb,var(--accent) 60%,transparent)}
+.calc input[type=range]::-moz-range-thumb{background:var(--accent);border:5px solid var(--ink)}
+.res .big{font-size:150px;font-weight:300;letter-spacing:-.05em;line-height:.9}
+.res .big small{font-size:.3em;color:var(--mut);letter-spacing:0;margin-left:10px}
+.res .lab{font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:16px}
+.res .two{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:50px;padding-top:30px;border-top:1px solid var(--line)}
+.res .two b{font-size:52px;font-weight:300;letter-spacing:-.03em;display:block}
+.bars{margin-top:44px;display:flex;flex-direction:column;gap:16px}
+.bars div{display:grid;grid-template-columns:220px 1fr 160px;align-items:center;font-size:17px;color:var(--mut)}
+.bars .tr2{height:14px;background:rgba(242,237,228,.06);border-radius:7px;overflow:hidden}
+.bars .tr2 i{display:block;height:100%;border-radius:7px;transition:width .8s var(--e);width:0}
+.bars .v2{text-align:right;color:var(--tx);font-variant-numeric:tabular-nums}
+
+/* facade */
+.fac{position:absolute;left:140px;top:330px;width:1180px;height:560px}
+.fac svg{width:100%;height:100%;overflow:visible}
+.fsc{position:absolute;right:140px;top:330px;width:430px;display:flex;flex-direction:column;border-top:1px solid var(--line);pointer-events:auto}
+.fsc button{all:unset;cursor:pointer;padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:44px 1fr;opacity:.42;transition:opacity .5s}
+.fsc button.a{opacity:1}
+.fsc button i{width:14px;height:14px;border-radius:50%;margin-top:9px}
+.fsc button b{font-size:27px;font-weight:400;display:block}
+.fsc button small{font-size:17px;color:var(--mut);font-weight:300}
+
+/* tenant standard */
+.ten{position:absolute;left:140px;right:140px;top:380px;height:470px}
+.ten .node{height:450px;width:500px}
+.ten .node .s{font-size:28px}
+.ten .node li{font-size:19px}
+
+/* shopper eye */
+.eye .shelf{fill:none;stroke:#14120f;stroke-width:2}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.2s!important;transition-delay:0s!important}
 }
@@ -391,17 +507,17 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 <div class="deck" id="deck">
 
 <!-- 01 COVER -->
-<section class="slide cover" data-ch="0" data-t="Светолюкс × SVL">
+<section class="slide cover" data-ch="0" data-t="Светолюкс × SVL для MEGA">
   <div class="bg"><img src="assets/city.jpg" alt=""></div>
   <div class="cone"></div><div class="lamp"></div><div class="bulb"></div>
   <div class="ttl">
-    <div class="kick r" style="--d:0">Презентация группы компаний · 2026</div>
+    <div class="kick r" style="--d:0">Для сети ТРЦ MEGA · 2026</div>
     <h1 class="h1" style="margin-top:48px">
       <span class="ln" style="--d:200"><span>Свет, который</span></span>
-      <span class="ln" style="--d:340"><span><em>работает</em> на людей</span></span>
-      <span class="ln" style="--d:480"><span>и города</span></span>
+      <span class="ln" style="--d:340"><span><em>ведёт,</em> продаёт</span></span>
+      <span class="ln" style="--d:480"><span>и удерживает</span></span>
     </h1>
-    <p class="lead r" style="--d:900;margin-top:48px">Светолюкс — розница и сервис освещения.<br>SVL — проектная светотехника для бизнеса и городской среды.</p>
+    <p class="lead r" style="--d:900;margin-top:48px">Световая среда торгово-развлекательного центра — от фасада и атриума до витрины каждого арендатора.</p>
   </div>
   <div class="logos r" style="--d:1200">
     <img class="wl" src="assets/svetolux-logo.png" alt="Светолюкс">
@@ -411,25 +527,347 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 </section>
 
 <!-- 02 MANIFESTO -->
-<section class="slide light mani" data-ch="0" data-t="О группе">
+<section class="slide light mani" data-ch="0" data-t="Идея">
   <div class="pad">
-    <div class="kick r">О группе</div>
+    <div class="kick r">Идея</div>
     <p class="q" style="margin-top:56px">
-      <span class="ln" style="--d:150"><span>Больше 15 лет мы приносим в Казахстан</span></span>
-      <span class="ln" style="--d:260"><span>правильный свет — от люстры в гостиной</span></span>
-      <span class="ln" style="--d:370"><span>до световой среды отеля, аэропорта</span></span>
-      <span class="ln" style="--d:480"><span>и <em>общественного пространства.</em></span></span>
+      <span class="ln" style="--d:150"><span>ТРЦ — это город под одной крышей.</span></span>
+      <span class="ln" style="--d:260"><span>Свет в нём одновременно работает</span></span>
+      <span class="ln" style="--d:370"><span>навигацией, витриной и атмосферой —</span></span>
+      <span class="ln" style="--d:480"><span>и решает, <em>как долго человек останется.</em></span></span>
     </p>
     <div class="cols">
-      <div class="r" style="--d:800"><h4><i class="dot red"></i>Светолюкс</h4><p class="p">Салоны освещения в Астане и интернет-магазин: свет для дома, интерьера и бизнеса с сервисом от консультации до монтажа.</p></div>
-      <div class="r" style="--d:950"><h4><i class="dot or"></i>SVL</h4><p class="p">Дочерняя проектная компания: подбор, комплектация и поставка светотехники для коммерческих, жилых и архитектурных объектов.</p></div>
-      <div class="r" style="--d:1100"><h4><i class="dot gd"></i>Экспертиза</h4><p class="p">Исследования световой среды и просвещение: партнёрство с Ассоциацией устойчивого развития территорий Q88.</p></div>
+      <div class="r" style="--d:800"><h4><i class="dot red"></i>Светолюкс</h4><p class="p">Мы сами ритейлер: салоны освещения в Астане с 2008 года. Знаем, как свет продаёт товар — на собственной полке.</p></div>
+      <div class="r" style="--d:950"><h4><i class="dot or"></i>SVL</h4><p class="p">Проектная светотехника: аудит, расчёт, комплектация, поставка и сопровождение больших общественных пространств.</p></div>
+      <div class="r" style="--d:1100"><h4><i class="dot gd"></i>Экспертиза</h4><p class="p">Сценарное и циркадное освещение, партнёрство с Ассоциацией Q88: свет как часть городской среды.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 03 NUMBERS -->
-<section class="slide" data-ch="0" data-t="В цифрах">
+<!-- 03 MEGA CONTEXT -->
+<section class="slide" data-ch="0" data-t="MEGA">
+  <div class="pad">
+    <div class="kick r">Масштаб задачи</div>
+    <h2 class="h2" style="margin-top:40px;max-width:1500px">
+      <span class="ln" style="--d:150"><span>Миллионы людей в месяц —</span></span>
+      <span class="ln" style="--d:280"><span>и каждый <em>видит MEGA через свет</em></span></span>
+    </h2>
+    <div class="stats" style="margin-top:130px">
+      <div class="stat r" style="--d:500"><div class="v num"><span data-count="3">0</span></div><div class="l">торгово-развлекательных центра в Алматы и Астане</div></div>
+      <div class="stat r" style="--d:620"><div class="v num"><span data-count="3">0</span><sup>млн+</sup></div><div class="l">посетителей в месяц по сети</div></div>
+      <div class="stat r" style="--d:740"><div class="v num"><span data-count="175300">0</span></div><div class="l">м² — общая площадь MEGA Alma-Ata</div></div>
+      <div class="stat r" style="--d:860"><div class="v num"><span data-count="140000">0</span></div><div class="l">м² — MEGA Silk Way, Астана. В работе — MEGA Garden</div></div>
+    </div>
+  </div>
+  <div class="src r" style="--d:1200">Источники: Forbes.kz, Astana Times, Digital Business (2026). Данные открытых публикаций — уточним вместе с MEGA.</div>
+</section>
+
+<!-- 04 ECONOMICS -->
+<section class="slide" data-ch="2" data-t="Экономика света">
+  <div class="pad">
+    <div class="kick r">Почему это важно</div>
+    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Свет в ТРЦ —</span></span><span class="ln" style="--d:260"><span>это <em>экономика</em>, а не декор</span></span></h2>
+    <div class="gauges">
+      <div class="ga r" style="--d:400"><svg viewBox="0 0 200 200"><circle class="bgc" cx="100" cy="100" r="90"/><circle class="arc" cx="100" cy="100" r="90" style="--p:.8;--d:400"/></svg><div class="v num"><div>до&nbsp;<span data-count="80">0</span><small>%</small></div></div><h5>Экономия энергии</h5><p>LED и сценарное управление вместо постоянного «всё включено»</p></div>
+      <div class="ga r" style="--d:520"><svg viewBox="0 0 200 200"><circle class="bgc" cx="100" cy="100" r="90"/><circle class="arc" cx="100" cy="100" r="90" style="--p:1;--d:520"/></svg><div class="v num"><div><span data-count="50">0</span><small>тыс. ч</small></div></div><h5>Срок службы</h5><p>Меньше замен на высоте атриумов и галерей — меньше затрат на сервис</p></div>
+      <div class="ga r" style="--d:640"><svg viewBox="0 0 200 200"><circle class="bgc" cx="100" cy="100" r="90"/><circle class="arc" cx="100" cy="100" r="90" style="--p:.6;--d:640"/></svg><div class="v num"><div>3–5<small>×</small></div></div><h5>Контраст акцента</h5><p>Товар освещён ярче фона — взгляд идёт к витрине, а не к потолку</p></div>
+      <div class="ga r" style="--d:760"><svg viewBox="0 0 200 200"><circle class="bgc" cx="100" cy="100" r="90"/><circle class="arc" cx="100" cy="100" r="90" style="--p:.9;--d:760"/></svg><div class="v num"><div><span data-count="90">0</span><small>+</small></div></div><h5>CRI</h5><p>Честный цвет одежды, косметики и еды — меньше возвратов и разочарований</p></div>
+    </div>
+  </div>
+  <div class="src r" style="--d:1200">Экономия — по проектам SVL в HoReCa; контраст и CRI — практика торгового освещения и EN 12464-1. Точные цифры для MEGA — по итогам аудита.</div>
+</section>
+
+<!-- 05 CHAPTER ANATOMY -->
+<section class="slide chap" data-ch="2" data-t="01 — Анатомия света ТРЦ">
+  <div class="side rimg" style="--d:100;width:1000px"><img src="assets/hilton2.jpg" alt=""></div>
+  <div class="big r" style="--d:300">01</div>
+  <div class="txt">
+    <div class="kick r" style="--d:200">Глава первая</div>
+    <h2 class="h1" style="margin-top:44px;font-size:118px"><span class="ln" style="--d:300"><span>Анатомия</span></span><span class="ln" style="--d:420"><span><em>света ТРЦ</em></span></span></h2>
+    <p class="lead r" style="--d:800;margin-top:36px;max-width:640px">Восемь зон, восемь разных задач. Один подрядчик, который видит центр целиком.</p>
+  </div>
+</section>
+
+<!-- 06 MALL ZONES -->
+<section class="slide" data-ch="2" data-t="Зоны ТРЦ" id="zonesSlide">
+  <div class="pad">
+    <div class="kick r">Разрез ТРЦ · наведите на номер</div>
+    <h2 class="h2" style="margin-top:34px;font-size:72px"><span class="ln" style="--d:150"><span>От паркинга до купола — <em>свой свет для каждой зоны</em></span></span></h2>
+  </div>
+  <div class="mall r" style="--d:300">
+    <svg viewBox="0 0 1100 700" id="mallsvg">
+      <defs>
+        <linearGradient id="lc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2b0" stop-opacity=".8"/><stop offset="1" stop-color="#ffb066" stop-opacity="0"/></linearGradient>
+        <linearGradient id="lcu" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffd59a" stop-opacity=".75"/><stop offset="1" stop-color="#ffb066" stop-opacity="0"/></linearGradient>
+        <linearGradient id="lcc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3ff" stop-opacity=".7"/><stop offset="1" stop-color="#cfdcff" stop-opacity="0"/></linearGradient>
+        <linearGradient id="scr" x1="0" x2="1"><stop offset="0" stop-color="#ff4fa3"/><stop offset=".5" stop-color="#5b7cff"/><stop offset="1" stop-color="#ff9a3c"/></linearGradient>
+        <linearGradient id="scrd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a6cff" stop-opacity=".45"/><stop offset="1" stop-color="#ff4fa3" stop-opacity="0"/></linearGradient>
+        <filter id="bl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+      </defs>
+      <!-- light layers -->
+      <g class="z" data-z="0"><g filter="url(#bl)"><rect x="148" y="172" width="16" height="348" fill="#ffd49a" opacity=".75"/><rect x="956" y="172" width="16" height="348" fill="#ffd49a" opacity=".75"/><rect x="176" y="136" width="174" height="30" rx="4" fill="#ffe7c2"/></g><rect x="178" y="138" width="170" height="26" rx="3" fill="#fff3de"/><text x="263" y="152" text-anchor="middle" dominant-baseline="central" style="font:600 14px Onest;letter-spacing:.42em;fill:#2a1d0a">MEGA</text></g>
+      <g class="z" data-z="1"><polygon points="560,108 490,520 630,520" fill="url(#lc)"/><polygon points="522,150 490,400 554,400" fill="url(#lc)" opacity=".7"/><polygon points="598,150 566,400 630,400" fill="url(#lc)" opacity=".7"/><circle cx="560" cy="108" r="5" fill="#fff1d6"/><circle cx="522" cy="150" r="3.5" fill="#fff1d6"/><circle cx="598" cy="150" r="3.5" fill="#fff1d6"/></g>
+      <g class="z" data-z="2" id="zGal"></g>
+      <g class="z" data-z="3" id="zShop"></g>
+      <g class="z" data-z="4" id="zFood"></g>
+      <g class="z" data-z="5"><rect x="702" y="188" width="226" height="46" fill="url(#scr)" opacity=".9"/><polygon points="702,234 928,234 958,280 672,280" fill="url(#scrd)"/><g filter="url(#bl)"><rect x="702" y="188" width="226" height="46" fill="url(#scr)" opacity=".6"/></g></g>
+      <g class="z" data-z="6" id="zPark"></g>
+      <g class="z" data-z="7"><polygon points="40,446 8,520 72,520" fill="url(#lc)"/><polygon points="1060,446 1028,520 1092,520" fill="url(#lc)"/><polygon points="95,520 72,440 118,440" fill="url(#lcu)"/><polygon points="1005,520 982,440 1028,440" fill="url(#lcu)"/><circle cx="46" cy="442" r="4" fill="#fff1d6"/><circle cx="1054" cy="442" r="4" fill="#fff1d6"/></g>
+      <!-- structure -->
+      <g class="ms">
+        <line x1="0" y1="520" x2="1100" y2="520"/>
+        <path d="M160 520 V172 H460 M660 172 H960 V520"/>
+        <path d="M460 172 Q560 64 660 172"/>
+        <path d="M160 400 H460 M660 400 H960 M160 280 H460 M660 280 H960"/>
+        <path d="M160 520 V640 H960 V520"/>
+        <path d="M40 520 V440 H58 M1060 520 V440 H1042"/>
+        <path d="M112 446 H160"/>
+        <circle cx="95" cy="462" r="26"/><line x1="95" y1="488" x2="95" y2="520"/>
+        <circle cx="1005" cy="462" r="26"/><line x1="1005" y1="488" x2="1005" y2="520"/>
+      </g>
+      <g class="ms2" id="mstruct">
+        <path d="M492 172 Q560 98 628 172"/>
+        <path d="M440 400 V384 H460 M680 400 V384 H660 M440 280 V264 H460 M680 280 V264 H660"/>
+        <path d="M478 520 L548 400 M572 400 L642 280"/>
+        <rect x="702" y="188" width="226" height="46"/>
+        <path d="M720 256 H910 M720 268 H910"/>
+        <path d="M310 520 V640 M460 520 V640 M660 520 V640 M810 520 V640"/>
+        <rect x="200" y="612" width="62" height="18" rx="6"/><rect x="372" y="612" width="62" height="18" rx="6"/><rect x="700" y="612" width="62" height="18" rx="6"/><rect x="862" y="612" width="62" height="18" rx="6"/>
+      </g>
+      <g id="hs"></g>
+    </svg>
+  </div>
+  <div class="zinfo">
+    <div class="zfade" id="zbox">
+      <div class="zn num" id="zn">01 / 08</div>
+      <h3 id="zh">Фасад и вход</h3>
+      <div class="zt" id="zt"></div>
+      <p class="zs" id="zs"></p>
+      <div class="chips" id="zc"></div>
+    </div>
+    <div class="zlist" id="zl"></div>
+  </div>
+  <div class="src" style="bottom:70px">Уровни освещённости — ориентиры по EN 12464-1 и практике торговых центров. Финальные значения — по светорасчёту DIALux для конкретного объекта.</div>
+</section>
+
+<!-- 07 LIGHT LAYERS -->
+<section class="slide" data-ch="2" data-t="Три слоя света" id="laySlide">
+  <div class="pad">
+    <div class="split" style="grid-template-columns:720px 1fr;gap:110px">
+      <div class="rimg" style="--d:100;height:840px;margin-top:-30px"><div class="lay" id="lay" data-s="0"><img src="assets/retail1.jpg" alt=""><div class="flat"></div><div class="ac"></div><div class="dc"></div><div class="tagl" id="layTag">Только общий свет</div></div></div>
+      <div>
+        <div class="kick r">Три слоя света</div>
+        <h2 class="h2" style="margin-top:40px;font-size:76px"><span class="ln" style="--d:150"><span>Одно пространство —</span></span><span class="ln" style="--d:260"><span><em>три разных впечатления</em></span></span></h2>
+        <div class="lbtn r" style="--d:600" id="lbtn">
+          <button class="a"><span class="k">01</span><div><b>Общий свет</b><small>Видно всё — но взгляду не за что зацепиться</small></div></button>
+          <button><span class="k">02</span><div><b>+ Акцентный</b><small>Свет ведёт к товару: контраст 3–5× к фону</small></div></button>
+          <button><span class="k">03</span><div><b>+ Декоративный</b><small>Атмосфера, в которой хочется задержаться</small></div></button>
+        </div>
+        <p class="p r" style="--d:800;margin-top:36px;max-width:640px">В ТРЦ эти слои настраиваются раздельно: галереям — ровный общий свет, витринам — акцент, фудкорту и атриуму — атмосфера.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 CCT BY CATEGORY -->
+<section class="slide" data-ch="2" data-t="Цвет света по категориям">
+  <div class="pad">
+    <div class="kick r">Цветовая температура и CRI</div>
+    <h2 class="h2" style="margin-top:40px;font-size:76px"><span class="ln" style="--d:150"><span>У каждого товара —</span></span><span class="ln" style="--d:260"><span><em>своя температура света</em></span></span></h2>
+    <div class="cctc r" style="--d:400" id="cctc">
+      <div class="axis"><span class="p" style="font-size:14px;letter-spacing:.16em;text-transform:uppercase">Категория</span><div><div class="scale"></div><div class="tks"><span>2500 K</span><span>3000</span><span>3500</span><span>4000</span><span>4500</span><span>5000</span><span>5500 K</span></div></div><span class="p" style="font-size:14px;letter-spacing:.16em;text-transform:uppercase;text-align:right">CRI</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 SHOPPER EYE (light) -->
+<section class="slide light" data-ch="2" data-t="Вертикальный свет">
+  <div class="pad">
+    <div class="split" style="grid-template-columns:1fr 1fr">
+      <div>
+        <div class="kick r">Вертикальный свет</div>
+        <h2 class="h2" style="margin-top:40px;font-size:76px"><span class="ln" style="--d:150"><span>Покупатель смотрит</span></span><span class="ln" style="--d:260"><span><em>на товар и лица,</em></span></span><span class="ln" style="--d:370"><span>а не на пол</span></span></h2>
+        <ul class="list" style="margin-top:60px">
+          <li class="r" style="--d:600"><span>—</span><div>Часто освещённость проверяют <b>горизонтально</b> — на полу галереи</div></li>
+          <li class="r" style="--d:700"><span>—</span><div>Решение о покупке принимают <b>по вертикали</b>: витрина, полка, лицо в зеркале примерочной</div></li>
+          <li class="r" style="--d:800"><span>→</span><div>Мы считаем вертикальную освещённость витрин, вывесок и лиц — там, где работает свет</div></li>
+        </ul>
+      </div>
+      <div class="eye r" style="--d:300">
+        <svg viewBox="0 0 760 760">
+          <line x1="40" y1="40" x2="720" y2="40" stroke="#14120f" stroke-width="2"/>
+          <rect x="140" y="52" width="440" height="8" rx="2" fill="#14120f"/>
+          <path d="M210 60 L130 660 H330 Z" fill="rgba(20,18,15,.05)"/>
+          <line class="ray" x1="210" y1="64" x2="160" y2="660" stroke="rgba(20,18,15,.35)"/>
+          <line class="ray" x1="210" y1="64" x2="290" y2="660" stroke="rgba(20,18,15,.35)"/>
+          <rect x="470" y="60" width="22" height="34" rx="4" fill="#14120f" transform="rotate(-28 481 77)"/>
+          <path d="M492 92 L600 230 L600 600 Z" fill="rgba(255,106,31,.14)"/>
+          <line class="ray" x1="492" y1="92" x2="600" y2="300" stroke="#ff6a1f" stroke-width="3"/>
+          <line class="ray" x1="492" y1="92" x2="600" y2="500" stroke="#ff6a1f" stroke-width="3"/>
+          <path class="shelf" d="M600 200 V660 M600 200 H700 V660 M600 300 H700 M600 400 H700 M600 500 H700"/>
+          <rect x="620" y="262" width="22" height="38" fill="rgba(255,106,31,.5)"/><rect x="652" y="270" width="30" height="30" fill="rgba(20,18,15,.25)"/>
+          <rect x="616" y="360" width="34" height="40" fill="rgba(20,18,15,.25)"/><rect x="660" y="352" width="22" height="48" fill="rgba(255,106,31,.45)"/>
+          <rect x="626" y="462" width="44" height="38" fill="rgba(255,106,31,.35)"/>
+          <circle class="fig" cx="400" cy="300" r="26"/>
+          <path class="fig" d="M400 326 L404 470 M404 470 L384 660 M404 470 L428 660 M402 360 L450 420 L500 404"/>
+          <line class="ray" x1="420" y1="296" x2="600" y2="330" stroke="#ff6a1f" stroke-width="2"/>
+          <circle cx="420" cy="296" r="5" fill="#ff6a1f"/>
+          <line x1="40" y1="660" x2="720" y2="660" stroke="#14120f" stroke-width="3"/>
+          <text x="140" y="700" font-family="Onest" font-size="20" fill="rgba(20,18,15,.6)">Горизонтальная — на полу</text>
+          <text x="650" y="176" text-anchor="middle" font-family="Onest" font-size="20" fill="#c2500f">Вертикальная — на товаре</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 DAY SCENARIOS (light) -->
+<section class="slide light" data-ch="2" data-t="Сценарии суток" id="simSlide">
+  <div class="pad" style="top:110px">
+    <div class="kick r">Сценарии суток · потяните ползунок</div>
+    <div class="sim">
+      <div class="room rimg" style="--d:200"><img src="assets/hilton2.jpg" alt=""><div class="tint" id="tint"></div><div class="lift" id="lift"></div>
+        <div class="hud"><div class="t num" id="clock">07:00</div><div class="k"><span id="kel">4000 K</span><br><span id="lux">30%</span></div></div>
+      </div>
+      <div class="r" style="--d:400">
+        <h3 class="h3"><span>Свет, который живёт</span><br><em>по расписанию ТРЦ</em></h3>
+        <div class="chart" style="margin-top:30px">
+          <svg viewBox="0 0 900 360" id="chart">
+            <defs><linearGradient id="goldfade" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff6a1f" stop-opacity=".22"/><stop offset="1" stop-color="#ff6a1f" stop-opacity="0"/></linearGradient></defs>
+            <line class="ax" x1="0" y1="320" x2="900" y2="320"/>
+            <path class="area" id="area"/>
+            <path class="stat-l" d="M0 40 H900"/>
+            <path class="ad" id="adPath" style="stroke:#ff6a1f"/>
+            <text x="900" y="30" text-anchor="end">без сценариев — 100%</text>
+            <g class="mk" id="mk"><line x1="0" y1="20" x2="0" y2="320"/><circle r="7" cx="0" cy="0"/></g>
+            <g id="ticks"></g>
+          </svg>
+        </div>
+        <input type="range" min="7" max="24" step="0.05" value="7" id="tr">
+        <div class="phase" id="phase">
+          <div><b>Подготовка</b>уборка, сервис</div><div><b>День</b>свет купола</div><div><b>Вечерний пик</b>максимум атмосферы</div><div><b>Ночь</b>охрана, техслужбы</div>
+        </div>
+        <p class="p" style="margin-top:28px;font-size:20px;color:#14120f">Экономия за сутки по этому сценарию — <b style="color:#c2500f;font-weight:600" class="num"><span id="savp">0</span>%</b> при том же впечатлении в часы пик.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 CALCULATOR -->
+<section class="slide" data-ch="2" data-t="Калькулятор экономии">
+  <div class="pad">
+    <div class="kick r">Калькулятор · подвигайте параметры</div>
+    <h2 class="h2" style="margin-top:36px;font-size:76px"><span class="ln" style="--d:150"><span>Сколько стоит <em>старый свет</em></span></span></h2>
+    <div class="calc">
+      <div class="r" style="--d:400">
+        <div class="inp"><div class="row1"><label>Площадь общих зон</label><output id="oA"></output></div><input type="range" id="cA" min="5000" max="80000" step="1000" value="30000"></div>
+        <div class="inp"><div class="row1"><label>Часов света в сутки</label><output id="oH"></output></div><input type="range" id="cH" min="10" max="20" step="1" value="15"></div>
+        <div class="inp"><div class="row1"><label>Сейчас, Вт на м²</label><output id="oW"></output></div><input type="range" id="cW" min="9" max="25" step="1" value="16"></div>
+        <div class="inp"><div class="row1"><label>Тариф, ₸ за кВт·ч</label><output id="oT"></output></div><input type="range" id="cT" min="20" max="70" step="1" value="40"></div>
+      </div>
+      <div class="res r" style="--d:600">
+        <div class="big num" id="rTg">0<small>млн ₸</small></div>
+        <div class="lab">Экономия в год — оценка</div>
+        <div class="two">
+          <div><b class="num" id="rKwh">0</b><span class="p" style="font-size:17px">кВт·ч в год меньше</span></div>
+          <div><b class="num" id="rPct">0%</b><span class="p" style="font-size:17px">снижение расхода на свет</span></div>
+        </div>
+        <div class="bars">
+          <div><span>Сейчас</span><div class="tr2"><i id="b0" style="background:rgba(242,237,228,.45)"></i></div><span class="v2" id="v0"></span></div>
+          <div><span>LED</span><div class="tr2"><i id="b1" style="background:#ffb000"></i></div><span class="v2" id="v1"></span></div>
+          <div><span>LED + сценарии</span><div class="tr2"><i id="b2" style="background:var(--orange)"></i></div><span class="v2" id="v2"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="src">Допущения: LED — 7 Вт/м², сценарии и датчики — ещё −25%. Это ориентир для разговора; точный расчёт — после аудита и светорасчёта DIALux.</div>
+</section>
+
+<!-- 12 FACADE -->
+<section class="slide" data-ch="2" data-t="Фасад и события" id="facSlide">
+  <div class="pad">
+    <div class="kick r">Фасад · сценарии</div>
+    <h2 class="h2" style="margin-top:36px;font-size:76px"><span class="ln" style="--d:150"><span>Фасад, который</span></span><span class="ln" style="--d:260"><span><em>говорит с городом</em></span></span></h2>
+  </div>
+  <div class="fac r" style="--d:300">
+    <svg viewBox="0 0 1180 560" id="facsvg">
+      <defs>
+        <linearGradient id="refl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" id="reflc" stop-color="#ffd49a" stop-opacity=".35"/><stop offset="1" stop-color="#ffd49a" stop-opacity="0"/></linearGradient>
+        <filter id="fbl" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+      </defs>
+      <rect x="20" y="472" width="1140" height="90" fill="url(#refl)"/>
+      <g id="finsGlow" filter="url(#fbl)" opacity=".8"></g>
+      <g id="fins"></g>
+      <rect x="40" y="150" width="1100" height="320" fill="none" stroke="rgba(242,237,228,.25)" stroke-width="1.4"/>
+      <rect x="420" y="80" width="340" height="70" fill="#0c0b0a" stroke="rgba(242,237,228,.25)" stroke-width="1.4"/>
+      <text x="590" y="116" text-anchor="middle" dominant-baseline="central" id="facSign" style="font:500 34px Onest;letter-spacing:.5em;fill:#fff1d6">MEGA</text>
+      <rect x="500" y="352" width="180" height="118" fill="#0c0b0a" stroke="rgba(242,237,228,.3)"/>
+      <path d="M470 350 H710" stroke="rgba(242,237,228,.6)" stroke-width="3"/>
+      <rect x="510" y="362" width="160" height="108" fill="#ffe2b0" opacity=".12"/>
+      <line x1="0" y1="470" x2="1180" y2="470" stroke="rgba(242,237,228,.3)"/>
+    </svg>
+  </div>
+  <div class="fsc r" style="--d:500" id="fsc">
+    <button class="a"><i style="background:#ffd49a"></i><div><b>Каждый вечер</b><small>Тёплый белый, спокойная архитектура</small></div></button>
+    <button><i style="background:linear-gradient(90deg,#29d3c4,#f5c400)"></i><div><b>Наурыз</b><small>Бирюза и золото, весенняя волна</small></div></button>
+    <button><i style="background:#cfe3ff"></i><div><b>Новый год</b><small>Холодный белый с мерцанием</small></div></button>
+    <button><i style="background:linear-gradient(90deg,#00afca,#fec50c)"></i><div><b>День Независимости</b><small>Цвета флага Казахстана</small></div></button>
+    <button><i style="background:linear-gradient(90deg,#ff4fa3,#ff6a1f)"></i><div><b>Событие в MEGA</b><small>Динамика под концерт или распродажу</small></div></button>
+  </div>
+</section>
+
+<!-- 13 TENANT STANDARD -->
+<section class="slide" data-ch="2" data-t="Стандарт для арендаторов">
+  <div class="pad">
+    <div class="kick r">Арендаторы</div>
+    <h2 class="h2" style="margin-top:36px;font-size:76px;max-width:1600px"><span class="ln" style="--d:150"><span>Единый световой стандарт —</span></span><span class="ln" style="--d:260"><span><em>без «пёстрой» галереи</em></span></span></h2>
+  </div>
+  <div class="ten grp" style="top:400px">
+    <svg viewBox="0 0 1640 450" preserveAspectRatio="none">
+      <defs><linearGradient id="gflow2" x1="0" x2="1"><stop offset="0" stop-color="#ff6a1f" stop-opacity="0"/><stop offset=".6" stop-color="#ffb000"/><stop offset="1" stop-color="#fff1d6"/></linearGradient></defs>
+      <path class="path" d="M500 225 H570"/><path class="path" d="M1070 225 H1140"/>
+      <path class="flow" d="M0 225 H1640" style="stroke:url(#gflow2)"/>
+    </svg>
+    <div class="node r" style="left:0;--d:400"><div class="k">01 · Стандарт</div><h3>Световой регламент</h3><div class="s">единые правила</div><ul><li>Цветовая температура, CRI, UGR и мерцание</li><li>Яркость витрины относительно галереи</li><li>Правила для вывесок и лайтбоксов</li></ul></div>
+    <div class="node r" style="left:570px;--d:600"><img class="lg" src="assets/svl-logo.png" alt=""><div class="k">02 · Контроль</div><h3>Экспертиза SVL</h3><div class="s">проверка проектов</div><ul><li>Согласование светотехники арендаторов</li><li>Замеры при приёмке помещения</li><li>Рекомендации по модернизации</li></ul></div>
+    <div class="node r" style="left:1140px;--d:800"><img class="lg wl" src="assets/svetolux-logo.png" alt=""><div class="k">03 · Поставка</div><h3>Светолюкс</h3><div class="s">для арендаторов</div><ul><li>Оборудование под стандарт MEGA</li><li>Отдельные условия для арендаторов</li><li>Монтаж и сервис</li></ul></div>
+  </div>
+</section>
+
+<!-- 14 PROCESS -->
+<section class="slide" data-ch="2" data-t="Процесс">
+  <div class="pad">
+    <div class="kick r">Процесс</div>
+    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Работаем,</span></span><span class="ln" style="--d:260"><span><em>не закрывая ТРЦ</em></span></span></h2>
+  </div>
+  <div class="steps" id="steps">
+    <div class="track"><div class="fill"></div></div>
+    <div class="row">
+      <div class="st"><div class="n">01</div><b>Аудит</b><p>Замеры, энергобаланс, фотофиксация</p></div>
+      <div class="st"><div class="n">02</div><b>Концепция</b><p>Зоны, сценарии, бюджет</p></div>
+      <div class="st"><div class="n">03</div><b>Светорасчёт DIALux</b><p>Каждая зона в масштабе</p></div>
+      <div class="st"><div class="n">04</div><b>Mock-up</b><p>Образцы света на объекте</p></div>
+      <div class="st"><div class="n">05</div><b>Пилотная зона</b><p>Замеры до и после</p></div>
+      <div class="st"><div class="n">06</div><b>Поэтапный монтаж</b><p>Ночью, без закрытия центра</p></div>
+      <div class="st"><div class="n">07</div><b>Сценарии</b><p>Настройка DALI / DMX</p></div>
+      <div class="st"><div class="n">08</div><b>Сервис</b><p>Гарантия и обслуживание</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 CHAPTER WHO -->
+<section class="slide chap" data-ch="1" data-t="02 — Кто мы">
+  <div class="side rimg" style="--d:100"><img src="assets/mood.jpg" alt=""></div>
+  <div class="big r" style="--d:300">02</div>
+  <div class="txt">
+    <div class="kick r" style="--d:200">Глава вторая · Кто мы</div>
+    <h2 class="h1" style="margin-top:44px;font-size:118px"><span class="ln" style="--d:300"><span>Светолюкс</span></span><span class="ln" style="--d:420"><span><em>× SVL</em></span></span></h2>
+    <p class="lead r" style="--d:800;margin-top:36px;max-width:680px">Розница освещения с 2008 года и проектная светотехника для больших общественных пространств.</p>
+  </div>
+</section>
+
+<!-- 16 NUMBERS -->
+<section class="slide" data-ch="1" data-t="В цифрах">
   <div class="pad">
     <div class="kick r">В цифрах</div>
     <h2 class="h2" style="margin-top:40px;max-width:1300px">
@@ -445,27 +883,8 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   </div>
 </section>
 
-<!-- 04 TIMELINE -->
-<section class="slide" data-ch="0" data-t="Путь">
-  <div class="pad">
-    <div class="kick r">Путь компании</div>
-    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>От салона освещения —</span></span><span class="ln" style="--d:270"><span>к <em>управлению световой средой</em></span></span></h2>
-  </div>
-  <div class="pad" style="top:120px">
-    <div class="tl"><div class="run"></div><div class="spark"></div></div>
-    <div class="tpts" style="top:470px">
-      <div class="tp r" style="--d:600"><div class="y">2008</div><b>Старт «Светолюкс»</b><p>Розничная продажа освещения в Астане</p></div>
-      <div class="tp r" style="--d:900"><div class="y">2017</div><b>Проектная экспертиза</b><p>Ануар Жабагинов — интерьерное и архитектурное освещение</p></div>
-      <div class="tp r" style="--d:1200"><div class="y sm">Рост</div><b>Светолюкс Premium</b><p>Салон на пр. Мангилик Ел и онлайн-каталог 80 000+ моделей</p></div>
-      <div class="tp r" style="--d:1500"><div class="y sm">SVL</div><b>Проектное направление</b><p>Отели, аэропорт, HoReCa, офисы — технический свет и LED</p></div>
-      <div class="tp r" style="--d:1800"><div class="y sm">Q88</div><b>Городская повестка</b><p>Партнёрство с Ассоциацией устойчивого развития территорий</p></div>
-      <div class="tp r" style="--d:2100"><div class="y sm">Сегодня</div><b>Циркадный урбанизм</b><p>Биодинамическое освещение для школ, клиник и ЦОНов</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 05 GROUP -->
-<section class="slide" data-ch="0" data-t="Структура">
+<!-- 17 GROUP -->
+<section class="slide" data-ch="1" data-t="Структура">
   <div class="pad">
     <div class="kick r">Структура группы</div>
     <h2 class="h2" style="margin-top:40px;max-width:1500px"><span class="ln" style="--d:150"><span>Одна экспертиза — <em>три уровня</em> задачи</span></span></h2>
@@ -475,36 +894,26 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <path class="path" d="M470 210 H585"/><path class="path" d="M1055 210 H1170"/>
         <path class="flow" d="M0 210 H1640"/>
       </svg>
-      <div class="node r" style="left:0;--d:400"><img class="lg wl" src="assets/svetolux-logo.png" alt=""><div class="k">01 · Розница</div><h3>Светолюкс</h3><div class="s">свет для жизни</div><ul><li>Салоны в Астане и онлайн</li><li>Официальный дилер брендов</li><li>Консультации, монтаж, умный дом</li></ul></div>
-      <div class="node r" style="left:585px;--d:600"><img class="lg" src="assets/svl-logo.png" alt=""><div class="k">02 · Проект</div><h3>SVL</h3><div class="s">свет для бизнеса</div><ul><li>Подбор под ТЗ и аналоги под бюджет</li><li>Спецификации, КП, документы</li><li>Поставка по всему Казахстану</li></ul></div>
-      <div class="node r" style="left:1170px;--d:800"><div class="k">03 · Город</div><h3>Экспертиза</h3><div class="s">свет для города</div><ul><li>Партнёр Ассоциации Q88</li><li>Циркадное освещение</li><li>Лекции и пилотные проекты</li></ul></div>
+      <div class="node r" style="left:0;--d:400"><img class="lg wl" src="assets/svetolux-logo.png" alt=""><div class="k">01 · Розница</div><h3>Светолюкс</h3><div class="s">свет, который продаёт</div><ul><li>Салоны в Астане и онлайн</li><li>Официальный дилер брендов</li><li>Поставка арендаторам и монтаж</li></ul></div>
+      <div class="node r" style="left:585px;--d:600"><img class="lg" src="assets/svl-logo.png" alt=""><div class="k">02 · Проект</div><h3>SVL</h3><div class="s">свет для бизнеса</div><ul><li>Аудит и светорасчёт</li><li>Спецификации, аналоги под бюджет</li><li>Поставка и сопровождение</li></ul></div>
+      <div class="node r" style="left:1170px;--d:800"><div class="k">03 · Город</div><h3>Экспертиза</h3><div class="s">свет для людей</div><ul><li>Партнёр Ассоциации Q88</li><li>Сценарное и циркадное освещение</li><li>Лекции и пилотные проекты</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- 06 CHAPTER SVETOLUX -->
-<section class="slide chap" data-ch="1" data-t="01 — Светолюкс">
-  <div class="side rimg" style="--d:100"><img src="assets/mood.jpg" alt=""></div>
-  <div class="big r" style="--d:300">01</div>
-  <div class="txt">
-    <div class="kick r" style="--d:200">Глава первая</div>
-    <h2 class="h1" style="margin-top:44px"><span class="ln" style="--d:300"><span>Светолюкс</span></span></h2>
-    <p class="lead r" style="--d:700;margin-top:36px">Эксперты современных световых решений. Розница, сервис и проекты для дома и бизнеса — с 2008 года.</p>
-  </div>
-</section>
-
-<!-- 07 RETAIL -->
-<section class="slide" data-ch="1" data-t="Салоны">
+<!-- 18 RETAIL -->
+<section class="slide" data-ch="1" data-t="Мы — ритейлер">
   <div class="pad">
     <div class="split">
       <div>
         <div class="kick r">Розница</div>
-        <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Свет, который</span></span><span class="ln" style="--d:260"><span>можно <em>увидеть</em></span></span><span class="ln" style="--d:370"><span>до покупки</span></span></h2>
+        <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Мы сами —</span></span><span class="ln" style="--d:260"><span><em>ритейлер</em></span></span></h2>
+        <p class="lead r" style="--d:500;margin-top:30px">И знаем, как свет продаёт товар, — на собственной полке.</p>
         <ul class="list">
           <li class="r" style="--d:600"><span>01</span><div><b>Светолюкс Premium</b> — Астана, пр. Мангилик Ел, 41</div></li>
           <li class="r" style="--d:700"><span>02</span><div><b>Светолюкс</b> — Астана, ул. Алмукан Сембинов, 9</div></li>
-          <li class="r" style="--d:800"><span>03</span><div><b>Интернет-магазин</b> — 80 000+ моделей с доставкой в любой город Казахстана</div></li>
-          <li class="r" style="--d:900"><span>04</span><div><b>Официальный дилер</b> — работа напрямую с производителями, без «серого импорта»</div></li>
+          <li class="r" style="--d:800"><span>03</span><div><b>Интернет-магазин</b> — 80 000+ моделей с доставкой по Казахстану</div></li>
+          <li class="r" style="--d:900"><span>04</span><div><b>Официальный дилер</b> — напрямую с производителями, без «серого импорта»</div></li>
         </ul>
       </div>
       <div class="imgs3">
@@ -516,7 +925,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   </div>
 </section>
 
-<!-- 08 BRANDS -->
+<!-- 19 BRANDS -->
 <section class="slide" data-ch="1" data-t="Бренды">
   <div class="pad">
     <div class="kick r">Партнёры</div>
@@ -526,112 +935,12 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   <div class="mq rev r" style="top:720px;--d:650"><div class="tr" id="mq2"></div></div>
 </section>
 
-<!-- 09 SERVICE -->
-<section class="slide" data-ch="1" data-t="Сервис">
-  <div class="pad">
-    <div class="kick r">Сервис</div>
-    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Полный цикл: от консультации</span></span><span class="ln" style="--d:260"><span>до <em>обслуживания</em></span></span></h2>
-    <div class="cards" style="margin-top:70px">
-      <div class="card r" style="--d:400"><svg viewBox="0 0 44 44"><circle cx="22" cy="18" r="10"/><path d="M16 30h12M18 35h8"/></svg><div class="i">01</div><h4>Консультации по свету</h4><p>Подбор под интерьер, сценарий жизни и бюджет</p></div>
-      <div class="card r" style="--d:480"><svg viewBox="0 0 44 44"><rect x="6" y="6" width="32" height="32"/><path d="M6 30 L18 18 L26 26 L38 14"/></svg><div class="i">02</div><h4>Светорасчёт DIALux</h4><p>Бесплатно для корпоративных клиентов</p></div>
-      <div class="card r" style="--d:560"><svg viewBox="0 0 44 44"><path d="M22 4v10M10 26a12 12 0 0 1 24 0z"/><path d="M14 34h16"/></svg><div class="i">03</div><h4>Примерка на объекте</h4><p>Выезд с оборудованием, чтобы увидеть свет вживую</p></div>
-      <div class="card r" style="--d:640"><svg viewBox="0 0 44 44"><path d="M8 36 L24 20 M28 8l8 8-6 6-8-8z"/></svg><div class="i">04</div><h4>Установка и электромонтаж</h4><p>Монтаж любой сложности силами своей команды</p></div>
-      <div class="card r" style="--d:720"><svg viewBox="0 0 44 44"><path d="M6 22 L22 8 L38 22 V38 H6z"/><circle cx="22" cy="27" r="4"/></svg><div class="i">05</div><h4>Умный дом</h4><p>Интеграция освещения в сценарии управления</p></div>
-      <div class="card r" style="--d:800"><svg viewBox="0 0 44 44"><rect x="4" y="14" width="24" height="16"/><path d="M28 19h8l4 5v6H28"/><circle cx="12" cy="33" r="3"/><circle cx="34" cy="33" r="3"/></svg><div class="i">06</div><h4>Доставка по Казахстану</h4><p>В любой город, с ответом клиенту в течение 10 минут</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 10 PRIVATE -->
-<section class="slide" data-ch="1" data-t="Частные интерьеры">
-  <div class="trip">
-    <div class="rimg up" style="--d:0"><img src="assets/private1.jpg" alt=""></div>
-    <div class="rimg up" style="--d:180"><img src="assets/private2.jpg" alt=""></div>
-    <div class="rimg up" style="--d:360"><img src="assets/private3.jpg" alt=""></div>
-  </div>
-  <div class="trip-t">
-    <div class="kick r" style="--d:700">Частные интерьеры</div>
-    <h2 class="h2" style="margin-top:30px"><span class="ln" style="--d:800"><span>Дом, где свет меняется</span></span><span class="ln" style="--d:900"><span><em>вместе с вами</em></span></span></h2>
-  </div>
-</section>
-
-<!-- 11 HANDOFF -->
-<section class="slide hand" data-ch="2" data-t="Из розницы — в проект">
-  <div class="beam"></div><div class="pt"></div>
-  <div class="top">
-    <div>
-      <div class="kick r" style="--d:600">Переход</div>
-      <h2 class="h2" style="margin-top:34px"><span class="ln" style="--d:800"><span>Когда задача больше,</span></span><span class="ln" style="--d:920"><span>чем один светильник, —</span></span></h2>
-    </div>
-    <img class="svlbig r" style="--d:1400" src="assets/svl-logo.png" alt="SVL">
-  </div>
-  <div class="bot">
-    <p class="lead r" style="--d:1600;color:var(--tx)">начинается <em style="color:var(--orange);font-size:1.2em">SVL</em>. Дочерняя компания «Светолюкс», которая выросла из опыта тысяч реализованных розничных и частных проектов.</p>
-    <p class="p r" style="--d:1750">Этот опыт позволил SVL сосредоточиться на техническом освещении и внедрять лучшие LED-технологии — с акцентом на долговечность, энергоэффективность и комфортное восприятие света.</p>
-  </div>
-</section>
-
-<!-- 12 SVL APPROACH -->
-<section class="slide" data-ch="2" data-t="02 — SVL">
-  <div class="pad">
-    <div class="split" style="grid-template-columns:1.1fr 1fr">
-      <div>
-        <div class="kick r">SVL · Проектная светотехника</div>
-        <h2 class="h1" style="margin-top:44px;font-size:120px"><span class="ln" style="--d:150"><span>Сначала задача.</span></span><span class="ln" style="--d:280"><span><em>Потом —</em></span></span><span class="ln" style="--d:410"><span>светильник.</span></span></h2>
-        <p class="lead r" style="--d:800;margin-top:50px">Подбираем, комплектуем и поставляем световые решения для коммерческих, жилых и архитектурных объектов — без срыва сроков.</p>
-      </div>
-      <ul class="list" style="margin-top:110px">
-        <li class="r" style="--d:500"><span>01</span><div><b>Подбор под ТЗ</b><br><span style="font-size:19px;letter-spacing:0;color:var(--mut)">Планировки, визуализации, бюджет и сроки</span></div></li>
-        <li class="r" style="--d:600"><span>02</span><div><b>Комплектация объекта</b><br><span style="font-size:19px;letter-spacing:0;color:var(--mut)">Помещения, фасады, торговые и общественные зоны</span></div></li>
-        <li class="r" style="--d:700"><span>03</span><div><b>Аналоги под бюджет</b><br><span style="font-size:19px;letter-spacing:0;color:var(--mut)">Тот же визуальный эффект — в рамках сметы</span></div></li>
-        <li class="r" style="--d:800"><span>04</span><div><b>Спецификация и КП</b><br><span style="font-size:19px;letter-spacing:0;color:var(--mut)">Понятные документы для согласования и закупки</span></div></li>
-        <li class="r" style="--d:900"><span>05</span><div><b>Поставка и сопровождение</b><br><span style="font-size:19px;letter-spacing:0;color:var(--mut)">Логистика, замены, документы — до сдачи объекта</span></div></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 13 SEGMENTS -->
-<section class="slide" data-ch="2" data-t="Для кого">
-  <div class="pad">
-    <div class="kick r">Для кого</div>
-    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Каждый объект живёт</span></span><span class="ln" style="--d:260"><span>по своим <em>световым правилам</em></span></span></h2>
-    <div class="seg">
-      <div class="sg r" style="--d:400"><div class="n">01</div><h4>Дизайнеры и архитекторы</h4><p>Подбор под визуализацию, спецификацию, стиль и бюджет проекта</p></div>
-      <div class="sg r" style="--d:480"><div class="n">02</div><h4>HoReCa</h4><p>Рестораны, кафе, бары, отели, фасады и декоративные сценарии</p></div>
-      <div class="sg r" style="--d:560"><div class="n">03</div><h4>Офисы и бизнес-центры</h4><p>Рабочие зоны, переговорные, ресепшн, коридоры и общие пространства</p></div>
-      <div class="sg r" style="--d:640"><div class="n">04</div><h4>Девелоперы и подрядчики</h4><p>МОП, лобби, паркинги, фасады и коммерческие помещения</p></div>
-      <div class="sg r" style="--d:720"><div class="n">05</div><h4>Ритейл и шоурумы</h4><p>Торговые залы, витрины, примерочные и акцентная подача товара</p></div>
-      <div class="sg r" style="--d:800"><div class="n">06</div><h4>Жилые проекты</h4><p>Квартиры, дома и премиальные частные пространства</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 14 PARAMS -->
-<section class="slide" data-ch="2" data-t="Параметры">
-  <div class="pad">
-    <div class="kick r">Параметры</div>
-    <h2 class="h2" style="margin-top:40px;max-width:1500px"><span class="ln" style="--d:150"><span>Свет выбирают не по картинке,</span></span><span class="ln" style="--d:260"><span>а по <em>девяти параметрам</em></span></span></h2>
-    <div class="prm">
-      <div class="pr r" style="--d:400"><div class="g"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="12"/><path d="M30 6v8M30 46v8M6 30h8M46 30h8M13 13l6 6M41 41l6 6M13 47l6-6M41 19l6-6"/></svg></div><div><h5>Мощность</h5><p>Под площадь, высоту потолка и задачу зоны</p></div></div>
-      <div class="pr r" style="--d:460"><div class="g"><div class="cct"></div></div><div><h5>Цветовая температура</h5><p>Тёплый, нейтральный или холодный — под сценарий</p></div></div>
-      <div class="pr r" style="--d:520"><div class="g"><div class="cri" id="cri"></div></div><div><h5>CRI</h5><p>Честная передача цвета материалов, еды и товара</p></div></div>
-      <div class="pr r" style="--d:580"><div class="g"><svg viewBox="0 0 60 60"><path class="coneA" d="M30 8 L12 54 H48 Z" style="fill:rgba(255,160,60,.12);stroke:var(--accent)"/><circle cx="30" cy="8" r="3" style="fill:var(--accent);stroke:none"/></svg></div><div><h5>Угол света</h5><p>Общий, акцентный, декоративный, функциональный</p></div></div>
-      <div class="pr r" style="--d:640"><div class="g"><svg viewBox="0 0 60 60"><path d="M6 14h48M18 14v14h24V14M30 28v14M22 42h16"/></svg></div><div><h5>Тип монтажа</h5><p>Встраиваемый, накладной, подвесной, трековый</p></div></div>
-      <div class="pr r" style="--d:700"><div class="g"><svg viewBox="0 0 60 60"><path d="M30 8 C40 22 46 30 46 38 A16 16 0 0 1 14 38 C14 30 20 22 30 8z"/></svg></div><div><h5>IP-защита</h5><p>Для влажных, уличных и технических зон</p></div></div>
-      <div class="pr r" style="--d:760"><div class="g"><svg viewBox="0 0 60 60"><path d="M4 30 C14 16 46 16 56 30 C46 44 14 44 4 30z"/><circle cx="30" cy="30" r="7"/></svg></div><div><h5>UGR</h5><p>Контроль слепящего блеска в рабочих пространствах</p></div></div>
-      <div class="pr r" style="--d:820"><div class="g"><svg viewBox="0 0 60 60"><path d="M10 16h40M10 30h40M10 44h40"/><circle cx="22" cy="16" r="4" style="fill:var(--paper,#0c0b0a)"/><circle cx="40" cy="30" r="4"/><circle cx="16" cy="44" r="4"/></svg></div><div><h5>Управление</h5><p>Диммирование, сценарии, группы, DALI / 0–10V</p></div></div>
-      <div class="pr r" style="--d:880"><div class="g"><svg viewBox="0 0 60 60"><path d="M14 6h22l10 10v38H14z"/><path d="M36 6v10h10M20 28h20M20 36h20M20 44h12"/></svg></div><div><h5>Документы</h5><p>КП, спецификация и техданные для согласования</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 15 MAP -->
+<!-- 20 MAP -->
 <section class="slide" data-ch="2" data-t="География">
   <div class="pad">
     <div class="kick r">География</div>
-    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Весь</span></span><span class="ln" style="--d:260"><span><em>Казахстан</em></span></span></h2>
-    <p class="lead r" style="--d:600;margin-top:40px;max-width:520px">Поставка и сопровождение проектов в ключевых городах страны — с центром в Астане.</p>
+    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Алматы, Астана —</span></span><span class="ln" style="--d:260"><span><em>и весь Казахстан</em></span></span></h2>
+    <p class="lead r" style="--d:600;margin-top:40px;max-width:560px">Центры MEGA — в двух столицах. Наши проекты и поставки — там же и ещё в пяти городах страны.</p>
   </div>
   <div class="map">
     <svg viewBox="0 0 1000 560" id="mapsvg">
@@ -642,311 +951,138 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
   </div>
 </section>
 
-<!-- 16 CHAPTER PROJECTS -->
-<section class="slide chap" data-ch="2" data-t="Проекты">
-  <div class="side rimg" style="--d:100;width:1000px"><img src="assets/hilton2.jpg" alt=""></div>
-  <div class="big r" style="--d:300">02</div>
+<!-- 21 CHAPTER PROJECTS -->
+<section class="slide chap" data-ch="2" data-t="03 — Проекты">
+  <div class="side rimg" style="--d:100;width:1000px"><img src="assets/airport1.jpg" alt=""></div>
+  <div class="big r" style="--d:300">03</div>
   <div class="txt">
-    <div class="kick r" style="--d:200">Проекты SVL</div>
-    <h2 class="h1" style="margin-top:44px;font-size:112px"><span class="ln" style="--d:300"><span>Объекты, где</span></span><span class="ln" style="--d:420"><span>свет — <em>часть сервиса</em></span></span></h2>
-    <p class="lead r" style="--d:800;margin-top:36px;max-width:640px">Отели международных сетей, аэропорт, рестораны, фитнес и офисы — подбор, комплектация и поставка световых решений.</p>
+    <div class="kick r" style="--d:200">Глава третья · Проекты SVL</div>
+    <h2 class="h1" style="margin-top:44px;font-size:112px"><span class="ln" style="--d:300"><span>Большие пространства —</span></span><span class="ln" style="--d:420"><span><em>наша норма</em></span></span></h2>
+    <p class="lead r" style="--d:800;margin-top:36px;max-width:640px">Атриумы отелей международных сетей, аэропорт, рестораны и фитнес — тот же масштаб и поток людей, что и в ТРЦ.</p>
   </div>
 </section>
 
-<!-- 17 RIXOS -->
-<section class="slide" data-ch="2" data-t="Rixos">
-  <div class="proj">
-    <div class="main rimg" style="--d:0" data-gal>
-      <img class="cur" src="assets/rixos1.jpg" alt=""><img src="assets/rixos2.jpg" alt=""><img src="assets/rixos4.jpg" alt=""><img src="assets/rixos3.jpg" alt=""><img src="assets/rixos5.jpg" alt="">
-    </div>
-    <div class="info">
-      <div class="idx r" style="--d:300">01 / 05 · Отель</div>
-      <h2><span class="ln" style="--d:400"><span>Rixos</span></span></h2>
-      <div class="city r" style="--d:550">Туркестан</div>
-      <p class="d r" style="--d:700">Свет для номеров, лобби, ресторанов, SPA и бассейна отеля международной сети в духовной столице страны.</p>
-      <div class="tag r" style="--d:800"><span>Номера</span><span>Лобби</span><span>SPA</span><span>Бассейн</span></div>
-      <div class="thumbs r" style="--d:900"></div>
-    </div>
-  </div>
-</section>
-
-<!-- 18 HILTON -->
+<!-- 22 HILTON -->
 <section class="slide" data-ch="2" data-t="Hilton">
   <div class="proj">
     <div class="main rimg" data-gal>
-      <img class="cur" src="assets/hilton1.jpg" alt=""><img src="assets/hilton2.jpg" alt=""><img src="assets/hilton3.jpg" alt=""><img src="assets/hilton4.jpg" alt="">
+      <img class="cur" src="assets/hilton2.jpg" alt=""><img src="assets/hilton1.jpg" alt=""><img src="assets/hilton3.jpg" alt=""><img src="assets/hilton4.jpg" alt="">
     </div>
     <div class="info">
-      <div class="idx r" style="--d:300">02 / 05 · Отель</div>
+      <div class="idx r" style="--d:300">01 / 04 · Атриум</div>
       <h2><span class="ln" style="--d:400"><span>Hilton</span></span></h2>
       <div class="city r" style="--d:550">Астана</div>
-      <p class="d r" style="--d:700">Многоуровневый атриум, рестораны и общественные зоны: свет, который держит масштаб архитектуры и остаётся комфортным для гостя.</p>
-      <div class="tag r" style="--d:800"><span>Атриум</span><span>Рестораны</span><span>Общие зоны</span></div>
+      <p class="d r" style="--d:700">Многоуровневый атриум с галереями — та же задача, что в центре ТРЦ: свет держит масштаб архитектуры и остаётся комфортным на каждом уровне.</p>
+      <div class="tag r" style="--d:800"><span>Атриум</span><span>Галереи</span><span>Рестораны</span></div>
       <div class="thumbs r" style="--d:900"></div>
     </div>
   </div>
 </section>
 
-<!-- 19 NOVOTEL -->
-<section class="slide" data-ch="2" data-t="Novotel">
-  <div class="proj">
-    <div class="main rimg" data-gal>
-      <img class="cur" src="assets/novotel1.jpg" alt=""><img src="assets/novotel2.jpg" alt=""><img src="assets/novotel3.jpg" alt="">
-    </div>
-    <div class="info">
-      <div class="idx r" style="--d:300">03 / 05 · Отель</div>
-      <h2><span class="ln" style="--d:400"><span>Novotel</span></span></h2>
-      <div class="city r" style="--d:550">Алматы</div>
-      <p class="d r" style="--d:700">Лобби, ресторан, бассейн и деловые зоны — сценарный свет для гостей в любое время суток.</p>
-      <div class="tag r" style="--d:800"><span>Лобби</span><span>Ресторан</span><span>Бассейн</span></div>
-      <div class="thumbs r" style="--d:900"></div>
-    </div>
-  </div>
-</section>
-
-<!-- 20 AIRPORT -->
+<!-- 23 AIRPORT -->
 <section class="slide" data-ch="2" data-t="Аэропорт Астаны">
   <div class="proj">
     <div class="main rimg" data-gal>
       <img class="cur" src="assets/airport1.jpg" alt=""><img src="assets/airport2.jpg" alt="">
     </div>
     <div class="info">
-      <div class="idx r" style="--d:300">04 / 05 · Инфраструктура</div>
-      <h2 style="font-size:78px"><span class="ln" style="--d:400"><span>Международный</span></span><span class="ln" style="--d:500"><span>аэропорт</span></span></h2>
+      <div class="idx r" style="--d:300">02 / 04 · Поток 24/7</div>
+      <h2 style="font-size:64px"><span class="ln" style="--d:400"><span>Международный</span></span><span class="ln" style="--d:500"><span>аэропорт</span></span></h2>
       <div class="city r" style="--d:650">Астана</div>
-      <p class="d r" style="--d:800">Общественное пространство, которое работает круглосуточно: зоны ожидания и сервисные зоны, где свет отвечает за ориентацию, безопасность и спокойствие пассажиров.</p>
-      <div class="tag r" style="--d:900"><span>24/7</span><span>Зоны ожидания</span><span>Социальный объект</span></div>
+      <p class="d r" style="--d:800">Общественное пространство с непрерывным потоком людей: свет отвечает за ориентацию, безопасность и спокойствие — как в галереях торгового центра.</p>
+      <div class="tag r" style="--d:900"><span>24/7</span><span>Навигация</span><span>Большой поток</span></div>
       <div class="thumbs r" style="--d:1000"></div>
     </div>
   </div>
 </section>
 
-<!-- 21 MOSAIC -->
+<!-- 24 RIXOS -->
+<section class="slide" data-ch="2" data-t="Rixos">
+  <div class="proj">
+    <div class="main rimg" style="--d:0" data-gal>
+      <img class="cur" src="assets/rixos1.jpg" alt=""><img src="assets/rixos2.jpg" alt=""><img src="assets/rixos4.jpg" alt=""><img src="assets/rixos3.jpg" alt=""><img src="assets/rixos5.jpg" alt="">
+    </div>
+    <div class="info">
+      <div class="idx r" style="--d:300">03 / 04 · Отель</div>
+      <h2><span class="ln" style="--d:400"><span>Rixos</span></span></h2>
+      <div class="city r" style="--d:550">Туркестан</div>
+      <p class="d r" style="--d:700">Лобби, рестораны, SPA и бассейн отеля международной сети: разные сценарии в одном комплексе — как разные зоны ТРЦ.</p>
+      <div class="tag r" style="--d:800"><span>Лобби</span><span>Рестораны</span><span>SPA</span></div>
+      <div class="thumbs r" style="--d:900"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 25 MOSAIC -->
 <section class="slide" data-ch="2" data-t="Портфолио">
   <div class="mosaic">
-    <div class="m rimg up" style="--d:0"><img src="assets/delpapa.jpg" alt=""><div class="cap"><span>05 / 05 · ABR Group</span><b>Del Papa</b></div></div>
-    <div class="m rimg up" style="--d:120"><img src="assets/fitnation.jpg" alt=""><div class="cap"><span>Фитнес · Астана</span><b>FitNation</b></div></div>
+    <div class="m rimg up" style="--d:0"><img src="assets/delpapa.jpg" alt=""><div class="cap"><span>04 / 04 · Ресторан · формат фудкорта</span><b>Del Papa</b></div></div>
+    <div class="m rimg up" style="--d:120"><img src="assets/fitnation.jpg" alt=""><div class="cap"><span>Фитнес · типичный якорь ТРЦ</span><b>FitNation</b></div></div>
     <div class="m rimg up" style="--d:240"><img src="assets/bts.jpg" alt=""><div class="cap"><span>Офис · Астана</span><b>BTS</b></div></div>
     <div class="m rimg up" style="--d:360"><img src="assets/commercial.jpg" alt=""><div class="cap"><span>Коммерция</span><b>Коммерческие помещения</b></div></div>
     <div class="m rimg up" style="--d:480"><img src="assets/private2.jpg" alt=""><div class="cap"><span>Жильё</span><b>Частные интерьеры</b></div></div>
   </div>
 </section>
 
-<!-- 22 FACTS -->
-<section class="slide" data-ch="2" data-t="Экономика света">
-  <div class="pad">
-    <div class="kick r">Почему это важно</div>
-    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Правильный свет —</span></span><span class="ln" style="--d:260"><span>это <em>экономика</em>, а не декор</span></span></h2>
-    <div class="gauges">
-      <div class="ga r" style="--d:400"><svg viewBox="0 0 200 200"><circle class="bgc" cx="100" cy="100" r="90"/><circle class="arc" cx="100" cy="100" r="90" style="--p:.8;--d:400"/></svg><div class="v num"><div>до&nbsp;<span data-count="80">0</span><small>%</small></div></div><h5>Экономия энергии</h5><p>LED и сценарное управление в общественных зонах и номерах</p></div>
-      <div class="ga r" style="--d:520"><svg viewBox="0 0 200 200"><circle class="bgc" cx="100" cy="100" r="90"/><circle class="arc" cx="100" cy="100" r="90" style="--p:.72;--d:520"/></svg><div class="v num"><div>до&nbsp;<span data-count="72">0</span><small>%</small></div></div><h5>Гостей замечают свет</h5><p>Качество и сценарность света влияют на впечатление от отеля</p></div>
-      <div class="ga r" style="--d:640"><svg viewBox="0 0 200 200"><circle class="bgc" cx="100" cy="100" r="90"/><circle class="arc" cx="100" cy="100" r="90" style="--p:.9;--d:640"/></svg><div class="v num"><div><span data-count="90">0</span><small>+</small></div></div><h5>CRI</h5><p>Комфортная цветопередача без бликов и мерцания</p></div>
-      <div class="ga r" style="--d:760"><svg viewBox="0 0 200 200"><circle class="bgc" cx="100" cy="100" r="90"/><circle class="arc" cx="100" cy="100" r="90" style="--p:.4;--d:760"/></svg><div class="v num"><div>&lt;<span data-count="40">0</span><small>%</small></div></div><h5>Отелей со сценарным светом</h5><p>Рынок только начинает переход — пространство для роста</p></div>
-    </div>
-    <p class="p r" style="--d:1200;margin-top:70px;font-size:16px;letter-spacing:.04em">Срок службы светильников — до 50 000+ часов · Управление DALI / BLE / 0–10V · Сертификация ЕАЭС. Источник: рыночные инсайты из презентации SVL для HoReCa.</p>
-  </div>
-</section>
-
-<!-- 23 PROCESS -->
-<section class="slide" data-ch="2" data-t="Процесс">
-  <div class="pad">
-    <div class="kick r">Процесс</div>
-    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Восемь шагов —</span></span><span class="ln" style="--d:260"><span><em>от запроса до сервиса</em></span></span></h2>
-  </div>
-  <div class="steps" id="steps">
-    <div class="track"><div class="fill"></div></div>
-    <div class="row">
-      <div class="st"><div class="n">01</div><b>Запрос</b><p>ТЗ, планировки, визуализации</p></div>
-      <div class="st"><div class="n">02</div><b>Концепция</b><p>Зоны, сценарии, бюджет</p></div>
-      <div class="st"><div class="n">03</div><b>Светорасчёт DIALux</b><p>Объект в реальном масштабе</p></div>
-      <div class="st"><div class="n">04</div><b>Согласование</b><p>Спецификация и КП</p></div>
-      <div class="st"><div class="n">05</div><b>Заказ</b><p>Наличие, сроки, логистика</p></div>
-      <div class="st"><div class="n">06</div><b>Доставка и монтаж</b><p>Реализация на площадке</p></div>
-      <div class="st"><div class="n">07</div><b>Финал</b><p>Готовый объект</p></div>
-      <div class="st"><div class="n">08</div><b>Сервис</b><p>Поддержка и обновление</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 24 CHAPTER CITY -->
-<section class="slide chap" data-ch="3" data-t="03 — Свет и город">
-  <div class="side rimg" style="--d:100;width:1000px"><img src="assets/tson.jpg" alt=""></div>
-  <div class="big r" style="--d:300">03</div>
-  <div class="txt">
-    <div class="kick r" style="--d:200">Глава третья</div>
-    <h2 class="h1" style="margin-top:44px;font-size:118px"><span class="ln" style="--d:300"><span>Свет как</span></span><span class="ln" style="--d:420"><span><em>инфраструктура</em></span></span><span class="ln" style="--d:540"><span>города</span></span></h2>
-    <p class="lead r" style="--d:900;margin-top:36px;max-width:640px">Школы, поликлиники, ЦОНы и общественные пространства — объекты, где качество света напрямую влияет на здоровье и поведение людей.</p>
-  </div>
-</section>
-
-<!-- 25 SPEAKER / Q88 -->
-<section class="slide" data-ch="3" data-t="Спикер">
+<!-- 26 SPEAKER / Q88 -->
+<section class="slide" data-ch="3" data-t="Руководитель">
   <div class="spk">
     <div class="ph rimg" style="--d:0"><img src="assets/anuar.jpg" alt="Ануар Жабагинов"></div>
     <div class="in">
-      <div class="kick r" style="--d:300">Спикер · Руководитель</div>
+      <div class="kick r" style="--d:300">Руководитель · Спикер</div>
       <h2 class="h2" style="margin-top:36px;font-size:76px"><span class="ln" style="--d:400"><span>Ануар Кабылбекович</span></span><span class="ln" style="--d:500"><span>Жабагинов</span></span></h2>
       <p class="p r" style="--d:700;margin-top:30px;max-width:820px">Руководитель SVL и сети салонов «Светолюкс». Эксперт в интерьерном и архитектурном освещении с 2017 года, лектор образовательной программы Ассоциации Q88. Сотни реализованных проектов по всему Казахстану.</p>
       <div class="quote r" style="--d:900">«Управляя светом, мы управляем качеством городской жизни»</div>
       <div class="q88 r" style="--d:1100">
         <div class="mark">Q88</div>
-        <p><b>Ассоциация устойчивого развития территорий Q88.</b> SVL — партнёр ассоциации и участник программы «Трансформация городов и основы комплексного развития территорий»: делимся практикой освещения городских пространств с архитекторами, девелоперами и городскими управленцами.</p>
+        <p><b>Ассоциация устойчивого развития территорий Q88.</b> SVL — партнёр ассоциации и участник программы «Трансформация городов и основы комплексного развития территорий». Торговый центр — тоже общественное пространство города, и мы проектируем его свет с этой позиции.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 26 CIRCADIAN INTRO (light) -->
-<section class="slide light" data-ch="3" data-t="Циркадный урбанизм">
+<!-- 27 PROPOSAL (light) -->
+<section class="slide light" data-ch="2" data-t="Предложение">
   <div class="pad">
-    <div class="split" style="grid-template-columns:1fr 620px;gap:80px">
-      <div>
-        <div class="kick r">Доклад · Циркадный урбанизм</div>
-        <h2 class="h2" style="margin-top:40px;font-size:80px"><span class="ln" style="--d:150"><span>До 90% жизни человек</span></span><span class="ln" style="--d:260"><span>проводит в <em>искусственной</em></span></span><span class="ln" style="--d:370"><span><em>световой среде</em></span></span></h2>
-        <p class="lead r" style="--d:700;margin-top:44px">Если эта среда утомляет и не учитывает физиологию, последствия становятся системными: падает эффективность, растёт число ошибок, снижается качество жизни.</p>
-        <p class="r" style="--d:900;margin-top:40px;font-size:34px;line-height:1.3;color:var(--navy)">Внутренний свет — это не интерьер.<br><em>Это фактор городской системы.</em></p>
-      </div>
-      <div class="r" style="--d:300">
-        <div class="donut">
-          <svg viewBox="0 0 520 520"><circle class="bgc" cx="260" cy="260" r="220"/><circle class="seg1" cx="260" cy="260" r="220"/><circle class="seg2" cx="260" cy="260" r="220" style="transform:rotate(313.2deg);transform-origin:260px 260px"/></svg>
-          <div class="c"><div><b class="num"><span data-count="87">0</span>%</b><span class="lbl">времени — в зданиях</span></div></div>
-        </div>
-        <div class="legend">
-          <div><i style="background:var(--navy)"></i>~87% — в зданиях</div>
-          <div><i style="background:var(--gold)"></i>~6% — в транспорте</div>
-          <div><i style="background:rgba(20,18,15,.1)"></i>~7% — на улице</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 27 DAY SIMULATOR (light) -->
-<section class="slide light" data-ch="3" data-t="Ритм дня" id="simSlide">
-  <div class="pad" style="top:110px">
-    <div class="kick r">Человек живёт в динамике — здания статичны</div>
-    <div class="sim">
-      <div class="room rimg" style="--d:200"><img src="assets/retail2.jpg" alt=""><div class="tint" id="tint"></div><div class="lift" id="lift"></div>
-        <div class="hud"><div class="t num" id="clock">06:00</div><div class="k"><span id="kel">2700 K</span><br><span id="lux">150 лк</span></div></div>
-      </div>
-      <div class="r" style="--d:400">
-        <h3 class="h3"><span>Свет, который следует</span><br><em>за ритмом организма</em></h3>
-        <div class="chart" style="margin-top:30px">
-          <svg viewBox="0 0 900 360" id="chart">
-            <defs><linearGradient id="goldfade" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c99a3e" stop-opacity=".28"/><stop offset="1" stop-color="#c99a3e" stop-opacity="0"/></linearGradient></defs>
-            <line class="ax" x1="0" y1="320" x2="900" y2="320"/>
-            <path class="area" id="area"/>
-            <path class="stat-l" d="M0 160 H900"/>
-            <path class="ad" id="adPath"/>
-            <text x="904" y="164">статичное здание</text>
-            <g class="mk" id="mk"><line x1="0" y1="20" x2="0" y2="320"/><circle r="7" cx="0" cy="0"/></g>
-            <g id="ticks"></g>
-          </svg>
-        </div>
-        <input type="range" min="6" max="24" step="0.05" value="6" id="tr">
-        <div class="phase" id="phase">
-          <div><b>Утро</b>активация</div><div><b>День</b>пик эффективности</div><div><b>Вечер</b>снижение нагрузки</div><div><b>Ночь</b>восстановление</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 28 EYE PLANE (light) -->
-<section class="slide light" data-ch="3" data-t="Свет в плоскости глаза">
-  <div class="pad">
-    <div class="split" style="grid-template-columns:1fr 1fr">
-      <div>
-        <div class="kick r">Ключевая ошибка</div>
-        <h2 class="h2" style="margin-top:40px;font-size:76px"><span class="ln" style="--d:150"><span>Мы измеряем свет</span></span><span class="ln" style="--d:260"><span>не там, где его</span></span><span class="ln" style="--d:370"><span><em>воспринимает человек</em></span></span></h2>
-        <ul class="list" style="margin-top:60px">
-          <li class="r" style="--d:600"><span>—</span><div>Нормы контролируют свет <b>на столе</b> — горизонтальная освещённость</div></li>
-          <li class="r" style="--d:700"><span>—</span><div>Организм воспринимает свет <b>через глаза</b> — вертикальная освещённость</div></li>
-          <li class="r" style="--d:800"><span>→</span><div>Нормы соблюдены, а биологический эффект отсутствует</div></li>
-        </ul>
-      </div>
-      <div class="eye r" style="--d:300">
-        <svg viewBox="0 0 760 760">
-          <rect x="230" y="40" width="200" height="14" rx="3" fill="#14120f"/>
-          <line x1="330" y1="0" x2="330" y2="40" stroke="#14120f" stroke-width="2"/>
-          <path d="M240 54 L110 520 H470 L420 54Z" fill="rgba(201,154,62,.13)"/>
-          <line class="ray" x1="300" y1="56" x2="220" y2="520" stroke="rgba(20,18,15,.4)"/>
-          <line class="ray" x1="360" y1="56" x2="400" y2="520" stroke="rgba(20,18,15,.4)"/>
-          <line class="ray" x1="425" y1="56" x2="588" y2="318" stroke="#c99a3e" stroke-width="3"/>
-          <line x1="90" y1="520" x2="520" y2="520" stroke="#14120f" stroke-width="3"/>
-          <line x1="130" y1="520" x2="130" y2="700" stroke="#14120f" stroke-width="3"/>
-          <line x1="480" y1="520" x2="480" y2="700" stroke="#14120f" stroke-width="3"/>
-          <circle class="fig" cx="610" cy="322" r="30"/>
-          <path class="fig" d="M612 354 C600 400 606 460 620 505 L520 512 M520 512 L528 690 M606 405 L548 468 L470 498"/>
-          <path class="fig" d="M600 525 H690 M660 525 L672 700 M612 525 L604 700 M690 525 L700 440"/>
-          <circle cx="590" cy="318" r="5" fill="#c99a3e"/>
-          <line x1="90" y1="540" x2="520" y2="540" stroke="rgba(20,18,15,.25)"/>
-          <text x="90" y="575" font-family="Onest" font-size="20" fill="rgba(20,18,15,.6)">Норма: горизонтальная, на столе</text>
-          <text x="560" y="262" text-anchor="middle" font-family="Onest" font-size="20" fill="#a87a24">Вертикальная — в плоскости глаза</text>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 29 SECTORS (light) -->
-<section class="slide light" data-ch="3" data-t="Социальные объекты">
-  <div class="pad" style="top:110px">
-    <div class="kick r">Социально значимые объекты</div>
-    <h2 class="h2" style="margin-top:34px;font-size:72px"><span class="ln" style="--d:150"><span>Свет управляет вниманием, стрессом</span></span><span class="ln" style="--d:260"><span>и <em>поведением</em></span></span></h2>
-    <div class="sec3">
-      <div class="sc r" style="--d:400"><div class="rimg" style="--d:400"><img src="assets/school.jpg" alt=""></div><h4>Школы и детсады</h4>
-        <div class="pr2"><div><h6>Проблема</h6><p>Одинаковый свет весь день, блики на доске, усталость к середине дня</p></div><div class="sol"><h6>Решение</h6><p>4 режима: старт дня, работа с доской, самостоятельная работа, спокойный режим</p></div></div></div>
-      <div class="sc r" style="--d:550"><div class="rimg" style="--d:550"><img src="assets/hospital.jpg" alt=""></div><h4>Поликлиники и больницы</h4>
-        <div class="pr2"><div><h6>Проблема</h6><p>Яркий свет ночью, низкая цветопередача, стресс пациентов и выгорание персонала</p></div><div class="sol"><h6>Решение</h6><p>Зонирование, дневной и ночной режимы, минимум ночной стимуляции</p></div></div></div>
-      <div class="sc r" style="--d:700"><div class="rimg" style="--d:700"><img src="assets/tson.jpg" alt=""></div><h4>ЦОНы и общественные зоны</h4>
-        <div class="pr2"><div><h6>Проблема</h6><p>Жёсткий свет весь день, напряжение, конфликты и усталость персонала</p></div><div class="sol"><h6>Решение</h6><p>Дневной и вечерний режимы, контроль бликов, вертикальный свет</p></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 30 ROADMAP (light) -->
-<section class="slide light" data-ch="3" data-t="Дорожная карта">
-  <div class="pad">
-    <div class="kick r">Дорожная карта внедрения в Казахстане</div>
-    <h2 class="h2" style="margin-top:40px;font-size:76px"><span class="ln" style="--d:150"><span>Не замена светильников,</span></span><span class="ln" style="--d:260"><span>а <em>управляемая система</em></span></span></h2>
-    <div class="road">
+    <div class="kick r">Предложение для MEGA</div>
+    <h2 class="h2" style="margin-top:40px;font-size:76px"><span class="ln" style="--d:150"><span>Начнём с одной зоны —</span></span><span class="ln" style="--d:260"><span><em>и измерим эффект</em></span></span></h2>
+    <div class="road" style="--navy:#c2500f">
       <div class="rl"></div>
-      <div class="rs r" style="--d:400"><div class="c" style="--d:400">01</div><h4>Пилотные объекты</h4><p>Школы, поликлиники, ЦОНы — объекты с максимальным эффектом</p></div>
-      <div class="rs r" style="--d:900"><div class="c" style="--d:900">02</div><h4>Метрики и ТЗ</h4><p>Функциональное ТЗ: сценарии, управление, вертикальный свет</p></div>
-      <div class="rs r" style="--d:1400"><div class="c" style="--d:1400">03</div><h4>Замеры до и после</h4><p>Реализация пилота, измерения и обучение персонала</p></div>
-      <div class="rs r" style="--d:1900"><div class="c" style="--d:1900">04</div><h4>Масштабирование</h4><p>Обратная связь и внедрение в типовые закупки и нормы</p></div>
+      <div class="rs r" style="--d:400"><div class="c" style="--d:400">01</div><h4>Световой аудит</h4><p>Замеры, энергобаланс и фотофиксация ключевых зон центра</p></div>
+      <div class="rs r" style="--d:900"><div class="c" style="--d:900">02</div><h4>Пилотная зона</h4><p>Галерея или атриум: новый свет и сценарии, замеры до и после</p></div>
+      <div class="rs r" style="--d:1400"><div class="c" style="--d:1400">03</div><h4>Масштабирование</h4><p>Поэтапно по зонам и центрам сети — по единому стандарту</p></div>
+      <div class="rs r" style="--d:1900"><div class="c" style="--d:1900">04</div><h4>MEGA Garden</h4><p>Свет в концепции нового центра — с первого дня проектирования</p></div>
     </div>
     <div class="kpi">
-      <div class="r" style="--d:2200"><h6>Технические KPI</h6><p>Освещённость, вертикальный свет, отсутствие мерцания</p></div>
-      <div class="r" style="--d:2300"><h6>Пользовательские KPI</h6><p>Уровень жалоб, субъективная усталость, комфорт</p></div>
-      <div class="r" style="--d:2400"><h6>Операционные KPI</h6><p>Энергопотребление и стоимость эксплуатации</p></div>
+      <div class="r" style="--d:2200"><h6 style="color:#c2500f">Энергия</h6><p>кВт·ч и тенге до и после — на одном счётчике</p></div>
+      <div class="r" style="--d:2300"><h6 style="color:#c2500f">Посетитель</h6><p>Время в галерее, отзывы, продажи арендаторов — по данным MEGA</p></div>
+      <div class="r" style="--d:2400"><h6 style="color:#c2500f">Эксплуатация</h6><p>Число отказов и стоимость обслуживания</p></div>
     </div>
   </div>
 </section>
 
-<!-- 31 ADVANTAGES -->
-<section class="slide" data-ch="2" data-t="Преимущества">
+<!-- 28 ADVANTAGES -->
+<section class="slide" data-ch="2" data-t="Почему мы">
   <div class="pad">
     <div class="kick r">Почему мы</div>
-    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Один партнёр — <em>от розетки</em></span></span><span class="ln" style="--d:260"><span><em>до городской стратегии</em></span></span></h2>
+    <h2 class="h2" style="margin-top:40px"><span class="ln" style="--d:150"><span>Один партнёр — от витрины</span></span><span class="ln" style="--d:260"><span><em>до купола атриума</em></span></span></h2>
     <div class="adv">
-      <div class="av r" style="--d:400"><div class="n">01</div><h4>15+ лет опыта</h4><p>Сотни проектов — от частных интерьеров до архитектурной подсветки</p></div>
-      <div class="av r" style="--d:480"><div class="n">02</div><h4>Прямые контракты</h4><p>Официальный дилер мировых брендов, сертифицированное оборудование</p></div>
-      <div class="av r" style="--d:560"><div class="n">03</div><h4>Полный цикл</h4><p>ТЗ, светорасчёт, спецификация, поставка, монтаж и сервис</p></div>
-      <div class="av r" style="--d:640"><div class="n">04</div><h4>Аналоги под бюджет</h4><p>Сохраняем визуальный эффект и укладываемся в смету</p></div>
-      <div class="av r" style="--d:720"><div class="n">05</div><h4>Знаковые объекты</h4><p>Rixos, Hilton, Novotel, аэропорт Астаны</p></div>
-      <div class="av r" style="--d:800"><div class="n">06</div><h4>Городская экспертиза</h4><p>Партнёр Q88, циркадное освещение для социальных объектов</p></div>
+      <div class="av r" style="--d:400"><div class="n">01</div><h4>Мы сами ритейлер</h4><p>Свои салоны освещения: знаем, как свет продаёт товар</p></div>
+      <div class="av r" style="--d:480"><div class="n">02</div><h4>Большие пространства</h4><p>Атриум Hilton, аэропорт Астаны, отели Rixos и Novotel</p></div>
+      <div class="av r" style="--d:560"><div class="n">03</div><h4>Полный цикл</h4><p>Аудит, расчёт, поставка, монтаж, сценарии и сервис</p></div>
+      <div class="av r" style="--d:640"><div class="n">04</div><h4>Прямые контракты</h4><p>Официальный дилер мировых брендов, аналоги под бюджет</p></div>
+      <div class="av r" style="--d:720"><div class="n">05</div><h4>Энергоэффективность</h4><p>LED и управление DALI / DMX с расчётом окупаемости</p></div>
+      <div class="av r" style="--d:800"><div class="n">06</div><h4>Сервис для арендаторов</h4><p>Единый стандарт и поставка для арендаторов через Светолюкс</p></div>
     </div>
   </div>
 </section>
 
-<!-- 32 FINAL -->
+<!-- 29 FINAL -->
 <section class="slide fin" data-ch="0" data-t="Контакты">
   <div class="bg"><img src="assets/dusk.jpg" alt=""></div>
   <div class="pad">
     <div class="kick r">Следующий шаг</div>
-    <h2 class="h1" style="margin-top:44px;font-size:110px"><span class="ln" style="--d:150"><span>Выберем пилотный объект</span></span><span class="ln" style="--d:280"><span>и <em>включим свет</em></span></span></h2>
+    <h2 class="h1" style="margin-top:44px;font-size:110px"><span class="ln" style="--d:150"><span>Выберем первую галерею</span></span><span class="ln" style="--d:280"><span>и <em>включим свет</em></span></span></h2>
   </div>
   <div class="contacts">
     <div class="co r" style="--d:600"><img class="wl" src="assets/svetolux-logo.png" alt="Светолюкс">
@@ -986,7 +1122,7 @@ fill(document.getElementById('mq2'),brands.slice(8));
 
 /* cri bars */
 const cri=document.getElementById('cri');
-['#7b3fe4','#3f6fe4','#2bb3d9','#3fc47a','#c8d93f','#f2c53a','#f2913a','#e4463f'].forEach((c,i)=>{const b=document.createElement('i');b.style.background=c;b.style.transitionDelay=(700+i*70)+'ms';b.style.height=(14+Math.sin(i/7*Math.PI)*10)+'px';cri.appendChild(b)});
+if(cri)['#7b3fe4','#3f6fe4','#2bb3d9','#3fc47a','#c8d93f','#f2c53a','#f2913a','#e4463f'].forEach((c,i)=>{const b=document.createElement('i');b.style.background=c;b.style.transitionDelay=(700+i*70)+'ms';b.style.height=(14+Math.sin(i/7*Math.PI)*10)+'px';cri.appendChild(b)});
 
 /* galleries */
 document.querySelectorAll('[data-gal]').forEach(g=>{
@@ -1021,32 +1157,146 @@ document.querySelectorAll('[data-gal]').forEach(g=>{
   const sl=s.closest('.slide');sl._enter=()=>{let i=0;set(0);clearInterval(t);t=setInterval(()=>{i++;if(i>=st.length){clearInterval(t);return}set(i)},650)};sl._leave=()=>{clearInterval(t);set(-1);f.style.width='0'};
 })();
 
-/* circadian simulator */
+/* colour temperature → rgb */
+const kRGB=k=>{const pts=[[2200,[255,147,44]],[2700,[255,169,87]],[3000,[255,180,107]],[3500,[255,196,137]],[4000,[255,209,163]],[4500,[255,219,186]],[5000,[255,228,206]],[5500,[255,236,224]],[6500,[255,249,253]]];
+  if(k<=pts[0][0])return pts[0][1];
+  for(let i=0;i<pts.length-1;i++){const [a,ca]=pts[i],[b,cb]=pts[i+1];if(k<=b){const t=(k-a)/(b-a);return ca.map((v,j)=>Math.round(v+(cb[j]-v)*t))}}return pts.at(-1)[1]};
+
+/* mall zones */
 (()=>{
-  const stops=[[6,2700,150],[8,3800,400],[11,5500,750],[14,5000,650],[17,4000,450],[19,3000,250],[21,2700,120],[24,2200,30]];
-  const kRGB=k=>{const pts=[[2200,[255,147,44]],[2700,[255,169,87]],[3000,[255,180,107]],[4000,[255,209,163]],[5000,[255,228,206]],[5500,[255,236,224]],[6500,[255,249,253]]];
-    for(let i=0;i<pts.length-1;i++){const [a,ca]=pts[i],[b,cb]=pts[i+1];if(k<=b){const t=(k-a)/(b-a);return ca.map((v,j)=>Math.round(v+(cb[j]-v)*t))}}return pts.at(-1)[1]};
+  const S=(t,a)=>`<${t} ${Object.entries(a).map(([k,v])=>`${k}="${v}"`).join(' ')}/>`;
+  // galleries
+  let g='';[432,688].forEach(x=>[[172,280],[280,400],[400,520]].forEach(([s,f])=>{g+=S('polygon',{points:`${x},${s+3} ${x-26},${f} ${x+26},${f}`,fill:'url(#lc)'})+S('circle',{cx:x,cy:s+3,r:3,fill:'#fff1d6'})}));
+  document.getElementById('zGal').innerHTML=g;
+  // shops + accents
+  let sh='',st='';[[280,400],[400,520]].forEach(([s,f])=>[190,320,690,820].forEach(x=>{
+    st+=S('rect',{x,y:s+22,width:110,height:f-s-26});
+    [x+30,x+80].forEach(cx=>sh+=S('polygon',{points:`${cx},${s+4} ${cx-24},${f-4} ${cx+24},${f-4}`,fill:'url(#lc)'})+S('circle',{cx,cy:s+4,r:3,fill:'#fff1d6'}));
+    sh+=S('rect',{x:x+20,y:f-34,width:70,height:30,fill:'rgba(255,214,160,.28)'});
+  }));
+  document.getElementById('zShop').innerHTML=sh;
+  // food court
+  let fd='';[215,275,335,395].forEach(x=>{fd+=S('line',{x1:x,y1:172,x2:x,y2:212,stroke:'rgba(242,237,228,.5)'})+S('polygon',{points:`${x},222 ${x-28},280 ${x+28},280`,fill:'url(#lc)'})+S('circle',{cx:x,cy:218,r:7,fill:'#ffd59a'});st+=S('path',{d:`M${x-18} 258 H${x+18} M${x} 258 V280`})});
+  document.getElementById('zFood').innerHTML=fd;
+  // parking
+  let pk='';[200,350,500,650,800].forEach(x=>pk+=S('rect',{x,y:527,width:56,height:3,fill:'#eef3ff'})+S('polygon',{points:`${x+28},530 ${x-6},640 ${x+62},640`,fill:'url(#lcc)'}));
+  document.getElementById('zPark').innerHTML=pk;
+  document.getElementById('mstruct').insertAdjacentHTML('beforeend',st);
+
+  const Z=[
+    ['Фасад и вход','Ориентир в городе и первое впечатление','Архитектурная подсветка фасада, вывесок и входных групп. Динамические RGBW-сценарии под праздники и события, управление по DMX и астротаймеру.',[['RGBW','цвет'],['DMX','управление'],['IP66','защита']],[128,250]],
+    ['Атриум','Сердце ТРЦ и главная сцена','Прожекторы с узкой оптикой для большой высоты, сценарии для ивентов и сезонных инсталляций. Доступ для обслуживания закладываем в проект.',[['300–500','лк'],['3000–4000','K'],['90+','CRI']],[560,44]],
+    ['Галереи','Маршрут, по которому идёт покупатель','Ровный свет без бликов на полированном полу. Акцент — на витринах, а не на потолке. Датчики дневного света у остеклённых участков.',[['200–300','лк'],['3000–3500','K'],['< 22','UGR']],[470,336]],
+    ['Витрины арендаторов','Товар в лучшем свете','Акцентные трековые светильники с контрастом 3–5× к общему фону. Единые требования к свету для всех арендаторов.',[['750+','лк на товар'],['3000–4000','K'],['90+','CRI']],[245,468]],
+    ['Фудкорт и рестораны','Аппетит и желание задержаться','Тёплый свет с высокой цветопередачей: еда выглядит свежей, лица — живыми. Декоративные подвесы зонируют посадку.',[['200–300','лк'],['2700–3000','K'],['90+','CRI']],[245,198]],
+    ['Кино и развлечения','Эмоция — при полной безопасности','Кинотеатр, детская и игровые зоны: динамические сценарии и цветной свет при постоянном контроле путей эвакуации.',[['RGB','сценарии'],['DMX','управление'],['24/7','аварийный свет']],[815,262]],
+    ['Паркинг','Безопасность и главный резерв экономии','Линейные LED-светильники с датчиками присутствия: полный свет — только там, где есть люди и машины.',[['75–150','лк'],['4000–5000','K'],['Датчики','присутствия']],[560,584]],
+    ['Территория и МАФ','Вечерний город вокруг ТРЦ','Подъезды, пешеходные маршруты, наружная парковка и малые архитектурные формы. Свет ведёт от остановки до входа.',[['10–30','лк'],['3000','K'],['IP65+','защита']],[95,404]]
+  ];
+  const hs=document.getElementById('hs'),zl=document.getElementById('zl'),box=document.getElementById('zbox');
+  hs.innerHTML=Z.map((z,i)=>`<g class="hs" data-i="${i}" transform="translate(${z[4][0]},${z[4][1]})"><circle class="rg" r="15"/><circle class="b" r="15"/><text>${pad(i+1)}</text></g>`).join('');
+  zl.innerHTML=Z.map(()=>'<button><i></i></button>').join('');
+  const groups=[...document.querySelectorAll('#mallsvg .z')],dots=[...hs.children],bars=[...zl.children];
+  let cur=-1,t,man=false;
+  function set(i,instant){
+    if(i===cur)return;cur=i;
+    groups.forEach(g=>g.classList.toggle('a',+g.dataset.z===i));
+    dots.forEach((d,k)=>d.classList.toggle('a',k===i));
+    bars.forEach((b,k)=>{b.classList.toggle('done',k<i&&!man);b.classList.remove('a')});void zl.offsetWidth;bars[i].classList.add('a');
+    const z=Z[i];box.classList.add('out');
+    setTimeout(()=>{document.getElementById('zn').textContent=pad(i+1)+' / '+pad(Z.length);document.getElementById('zh').textContent=z[0];document.getElementById('zt').textContent=z[1];document.getElementById('zs').textContent=z[2];
+      document.getElementById('zc').innerHTML=z[3].map(c=>`<div><b>${c[0]}</b><span>${c[1]}</span></div>`).join('');box.classList.remove('out')},instant?0:300);
+  }
+  const auto=()=>{clearInterval(t);t=setInterval(()=>{if(cur>=Z.length-1){clearInterval(t);return}set(cur+1)},4500)};
+  const pick=i=>{man=true;zl.classList.add('man');clearInterval(t);set(i)};
+  dots.forEach((d,i)=>{d.addEventListener('mouseenter',()=>pick(i));d.addEventListener('click',e=>{e.stopPropagation();pick(i)})});
+  bars.forEach((b,i)=>b.addEventListener('click',e=>{e.stopPropagation();pick(i)}));
+  const sl=document.getElementById('zonesSlide');
+  sl._enter=()=>{man=false;zl.classList.remove('man');cur=-1;set(0,true);auto()};
+  sl._leave=()=>clearInterval(t);
+})();
+
+/* light layers */
+(()=>{const lay=document.getElementById('lay'),bs=[...document.querySelectorAll('#lbtn button')],tag=document.getElementById('layTag');
+  const tags=['Только общий свет','Общий + акцентный','Общий + акцентный + декоративный'];let t,i=0;
+  const set=k=>{i=k;lay.dataset.s=k;bs.forEach((b,j)=>b.classList.toggle('a',j<=k));tag.textContent=tags[k]};
+  bs.forEach((b,k)=>{b.onmouseenter=()=>{clearInterval(t);set(k)};b.onclick=e=>{e.stopPropagation();clearInterval(t);set(k)}});
+  const sl=document.getElementById('laySlide');
+  sl._enter=()=>{set(0);clearInterval(t);t=setTimeout(function n(){if(i<2){set(i+1);t=setTimeout(n,2600)}},2200)};
+  sl._leave=()=>clearTimeout(t);
+})();
+
+/* CCT ranges */
+(()=>{const c=document.getElementById('cctc');const K0=2500,K1=5500,P=k=>(k-K0)/(K1-K0)*100;
+  const rows=[['Фудкорт и рестораны','тёплый свет усиливает аппетит',2700,3000,'90+'],['Одежда и обувь','фактура ткани, естественные оттенки',3000,3500,'90+'],['Ювелирные салоны','золото — тёплый, бриллианты — нейтральный',3000,4000,'95+'],['Косметика и парфюмерия','точный цвет кожи и оттенков',3000,4000,'95+'],['Супермаркет','спецспектры для мяса, выпечки, овощей',2700,4000,'90+'],['Электроника и техника','чистый, технологичный образ',4000,4500,'80+'],['Паркинг и техзоны','ясная видимость и безопасность',4000,5000,'80+']];
+  c.insertAdjacentHTML('beforeend',rows.map((r,i)=>{const a=kRGB(r[2]),b=kRGB(r[3]);return `<div class="crow"><div><b>${r[0]}</b><small>${r[1]}</small></div><div class="trk"><div class="rng" style="left:${P(r[2])}%;width:${Math.max(2.4,P(r[3])-P(r[2]))}%;background:linear-gradient(90deg,rgb(${a}),rgb(${b}));transition-delay:${600+i*120}ms"></div></div><div class="cri2"><span>CRI</span>${r[4]}</div></div>`}).join(''));
+})();
+
+/* day scenarios (mall) */
+(()=>{
+  const stops=[[7,4000,30],[9.9,4000,35],[10.2,3500,85],[12,3500,70],[15,3500,62],[17,3200,85],[18,3000,100],[21,3000,100],[21.8,3000,70],[22.3,3000,15],[24,3000,10]];
   const at=h=>{for(let i=0;i<stops.length-1;i++){const a=stops[i],b=stops[i+1];if(h<=b[0]){const t=(h-a[0])/(b[0]-a[0]);const e=t*t*(3-2*t);return[a[1]+(b[1]-a[1])*e,a[2]+(b[2]-a[2])*e]}}return stops.at(-1).slice(1)};
-  const X=h=>(h-6)/18*900, Y=l=>320-l/800*300;
-  let d='';for(let h=6;h<=24.001;h+=.25){const[,l]=at(h);d+=(d?'L':'M')+X(h).toFixed(1)+' '+Y(l).toFixed(1)}
+  const X=h=>(h-7)/17*900, Y=l=>320-l/100*280;
+  let d='',sum=0,n=0;for(let h=7;h<=24.001;h+=.1){const[,l]=at(h);d+=(d?'L':'M')+X(h).toFixed(1)+' '+Y(l).toFixed(1);sum+=l;n++}
+  document.getElementById('savp').dataset.count=Math.round(100-sum/n);
   document.getElementById('adPath').setAttribute('d',d);
   document.getElementById('area').setAttribute('d',d+` L900 320 L0 320Z`);
-  let tk='';[6,9,12,15,18,21,24].forEach(h=>tk+=`<text x="${X(h)}" y="346" text-anchor="middle">${pad(h%24)}:00</text>`);document.getElementById('ticks').innerHTML=tk;
+  let tk='';[7,10,13,16,19,22,24].forEach(h=>tk+=`<text x="${X(h)}" y="346" text-anchor="middle">${pad(h%24)}:00</text>`);document.getElementById('ticks').innerHTML=tk;
   const tint=document.getElementById('tint'),lift=document.getElementById('lift'),mk=document.getElementById('mk'),tr=document.getElementById('tr');
   const ph=[...document.querySelectorAll('#phase div')];
-  function upd(h){const[k,l]=at(h);const c=kRGB(k);const b=.25+.75*Math.min(1,l/750);
+  function upd(h){const[k,l]=at(h);const c=kRGB(k);const b=.18+.82*l/100;
     tint.style.background=`rgb(${c.map(v=>Math.round(v*b)).join(',')})`;
-    lift.style.background=`radial-gradient(circle at 50% 20%,rgba(${c.join(',')},${.25+.5*b}),transparent 70%)`;
+    lift.style.background=`radial-gradient(circle at 50% 20%,rgba(${c.join(',')},${.2+.5*b}),transparent 70%)`;
     const hh=Math.floor(h),mm=Math.floor((h-hh)*60/5)*5;document.getElementById('clock').textContent=pad(hh%24)+':'+pad(mm);
-    document.getElementById('kel').textContent=Math.round(k/50)*50+' K';document.getElementById('lux').textContent=Math.round(l/10)*10+' лк';
+    document.getElementById('kel').textContent=Math.round(k/50)*50+' K';document.getElementById('lux').textContent='мощность '+Math.round(l)+'%';
     mk.setAttribute('transform',`translate(${X(h)},0)`);mk.querySelector('circle').setAttribute('cy',Y(l));
-    const p=h<10?0:h<16?1:h<21?2:3;ph.forEach((e,i)=>e.classList.toggle('a',i===p));tr.value=h}
-  let raf;tr.addEventListener('input',e=>{cancelAnimationFrame(raf);upd(+tr.value)});
+    const p=h<10?0:h<17?1:h<22?2:3;ph.forEach((e,i)=>e.classList.toggle('a',i===p));tr.value=h}
+  let raf;tr.addEventListener('input',()=>{cancelAnimationFrame(raf);upd(+tr.value)});
   tr.addEventListener('pointerdown',e=>e.stopPropagation());
-  upd(6);
+  upd(7);
   const sl=document.getElementById('simSlide');
-  sl._enter=()=>{cancelAnimationFrame(raf);const t0=performance.now()+900,D=9000;const step=n=>{const t=Math.max(0,Math.min(1,(n-t0)/D));upd(6+18*t);if(t<1)raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)};
+  sl._enter=()=>{cancelAnimationFrame(raf);const t0=performance.now()+900,D=9000;const step=n=>{const t=Math.max(0,Math.min(1,(n-t0)/D));upd(7+17*t);if(t<1)raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)};
   sl._leave=()=>cancelAnimationFrame(raf);
+})();
+
+/* savings calculator */
+(()=>{const $=id=>document.getElementById(id);const fmt=(v,d=0)=>v.toLocaleString('ru-RU',{maximumFractionDigits:d,minimumFractionDigits:d});
+  const ins=['cA','cH','cW','cT'];
+  function calc(){const A=+$('cA').value,H=+$('cH').value,W=+$('cW').value,T=+$('cT').value;
+    $('oA').innerHTML=fmt(A)+'<small>м²</small>';$('oH').innerHTML=H+'<small>ч</small>';$('oW').innerHTML=W+'<small>Вт/м²</small>';$('oT').innerHTML=T+'<small>₸</small>';
+    const now=A*W*H*365/1000,led=A*Math.min(7,W)*H*365/1000,smart=led*.75,sv=now-smart;
+    $('rTg').innerHTML=fmt(sv*T/1e6,1)+'<small>млн ₸</small>';
+    $('rKwh').textContent=sv>=1e6?fmt(sv/1e6,2)+' млн':fmt(sv);
+    $('rPct').textContent=Math.round(sv/now*100)+'%';
+    [now,led,smart].forEach((v,i)=>{$('b'+i).style.width=(v/now*100)+'%';$('v'+i).textContent=fmt(v/1e6,2)+' млн кВт·ч'});
+  }
+  ins.forEach(id=>{$(id).addEventListener('input',calc);$(id).addEventListener('pointerdown',e=>e.stopPropagation())});
+  calc();
+})();
+
+/* facade scenarios */
+(()=>{const fins=document.getElementById('fins'),glow=document.getElementById('finsGlow'),sign=document.getElementById('facSign'),refl=document.getElementById('reflc');
+  let h='';for(let x=62;x<=1112;x+=21)h+=`<rect x="${x}" y="168" width="7" height="284" rx="2"/>`;fins.innerHTML=h;glow.innerHTML=h;
+  const R=[...fins.children],G=[...glow.children],n=R.length;
+  const mix=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t));
+  const sc=[
+    (i,t)=>[...kRGB(3000),.55+.12*Math.sin(t*.8+i*.08)],
+    (i,t)=>{const w=(Math.sin(i*.22-t*1.6)+1)/2;return[...mix([41,211,196],[245,196,0],w),.85]},
+    (i,t)=>{const s=Math.sin(t*3.1+i*12.9898)*43758.5453;const tw=(s-Math.floor(s))>.93?1:.45;return[205,227,255,tw]},
+    (i,t)=>{const w=(Math.sin(i*.16-t*1.1)+1)/2;return[...mix([0,175,202],[254,197,12],w>.62?1:0),.85]},
+    (i,t)=>{const p=(t*14)%n,dd=Math.min(Math.abs(i-p),n-Math.abs(i-p));const w=Math.max(0,1-dd/7);return[...mix([255,79,163],[255,150,40],w),.35+.65*w]}
+  ];
+  const signC=[[255,236,210],[245,220,140],[230,240,255],[254,215,90],[255,190,150]];
+  let cur=0,raf,t0,auto;const bs=[...document.querySelectorAll('#fsc button')];
+  function frame(now){const t=(now-t0)/1000;let ar=0,ag=0,ab=0;
+    for(let i=0;i<n;i++){const [r,g,b,a]=sc[cur](i,t);const f=`rgba(${r},${g},${b},${a})`;R[i].setAttribute('fill',f);G[i].setAttribute('fill',f);ar+=r;ag+=g;ab+=b}
+    refl.setAttribute('stop-color',`rgb(${Math.round(ar/n)},${Math.round(ag/n)},${Math.round(ab/n)})`);
+    raf=requestAnimationFrame(frame)}
+  const set=k=>{cur=k;bs.forEach((b,j)=>b.classList.toggle('a',j===k));const c=signC[k];sign.style.fill=`rgb(${c})`;sign.style.filter=`drop-shadow(0 0 12px rgba(${c},.8))`};
+  bs.forEach((b,k)=>{b.onmouseenter=()=>{clearInterval(auto);set(k)};b.onclick=e=>{e.stopPropagation();clearInterval(auto);set(k)}});
+  const sl=document.getElementById('facSlide');
+  sl._enter=()=>{set(0);t0=performance.now();cancelAnimationFrame(raf);raf=requestAnimationFrame(frame);clearInterval(auto);auto=setInterval(()=>set((cur+1)%sc.length),3800)};
+  sl._leave=()=>{cancelAnimationFrame(raf);clearInterval(auto)};
 })();
 
 /* counters */
